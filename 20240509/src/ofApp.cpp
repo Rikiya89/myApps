@@ -3,7 +3,7 @@
 //--------------------------------------------------------------
 void ofApp::setup(){
     image.load("stars.png");
-    image.resize(500, 500);
+    image.resize(450, 450);
 
     mesh.setMode(OF_PRIMITIVE_LINES);
     mesh.enableColors();
@@ -76,7 +76,10 @@ void ofApp::draw(){
     ofBackgroundGradient(centerColor, edgeColor, OF_GRADIENT_CIRCULAR);
 
     easyCam.begin();
-    mesh.draw();
+        ofPushMatrix();
+            ofTranslate(-ofGetWidth()/3, -ofGetHeight()/2);
+            mesh.draw();
+        ofPopMatrix();
     easyCam.end();
 }
 

@@ -1,6 +1,7 @@
 #pragma once
 
 #include "ofMain.h"
+#include <vector>
 
 class ofApp : public ofBaseApp{
 public:
@@ -22,9 +23,9 @@ public:
     void dragEvent(ofDragInfo dragInfo);
     void gotMessage(ofMessage msg);
 
-    ofImage image;
-    ofMesh mesh;
-    std::vector<float> noiseSeeds;
-    std::vector<ofVec3f> offsets;
-    ofEasyCam easyCam;  // Easy camera for 3D view control
+    ofImage image;                // Image to load pixels from
+    ofMesh mesh;                  // Mesh to hold vertices and colors
+    std::vector<float> noiseSeeds; // Vector to hold noise seeds for vertices
+    std::vector<ofVec3f> offsets;  // Vector for random offsets in vertex animation
+    ofEasyCam easyCam;            // Easy camera for 3D view control
 };
