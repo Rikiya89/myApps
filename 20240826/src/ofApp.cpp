@@ -7,31 +7,40 @@ void ofApp::setup() {
     
     numPoints = 300; // Number of particles
     maxRadius = 10;  // Particle size
-    rotationSpeed = 0.3;
+    rotationSpeed = 0.2;  // Slower rotation for smoother visual
     noiseOffset = ofPoint(ofRandom(1000), ofRandom(1000)); // Initialize noise offset
 
     gradientStart = ofColor(20, 20, 60);  // Brighter gradient
     gradientEnd = ofColor(5, 5, 30);
 
-    fbo.allocate(ofGetWidth(), ofGetHeight(), GL_RGBA); // Set up FBO
+    colorShiftSpeed = 0.005;  // Slower color shift for smoother transitions
+    baseColor = ofColor(255, 100, 200);  // Base color for color cycling
+
+    attractStrength = 0.05;  // Lowered attract strength for smoother motion
+    repelStrength = 0.1;     // Lowered repel strength for smoother motion
 
     for (int i = 0; i < numPoints; i++) {
         float x = ofRandom(ofGetWidth());
         float y = ofRandom(ofGetHeight());
         points.push_back(ofPoint(x, y));
-        velocities.push_back(ofPoint(ofRandom(-1, 1), ofRandom(-1, 1)));
+        velocities.push_back(ofPoint(ofRandom(-0.5, 0.5), ofRandom(-0.5, 0.5)));  // Smoother initial velocity
         colors.push_back(generateRandomColor());
     }
 }
 
 //--------------------------------------------------------------
 void ofApp::update() {
+    // Update base color for color cycling
+    baseColor.r = 127 + 127 * sin(ofGetElapsedTimef() * colorShiftSpeed);
+    baseColor.g = 127 + 127 * sin(ofGetElapsedTimef() * colorShiftSpeed + PI / 2);
+    baseColor.b = 127 + 127 * sin(ofGetElapsedTimef() * colorShiftSpeed + PI);
+
     for (int i = 0; i < numPoints; i++) {
-        // Apply Perlin noise to velocity
-        float noiseX = ofNoise(points[i].x * 0.005 + noiseOffset.x, ofGetElapsedTimef() * 0.1);
-        float noiseY = ofNoise(points[i].y * 0.005 + noiseOffset.y, ofGetElapsedTimef() * 0.1);
-        velocities[i].x = ofMap(noiseX, 0, 1, -1, 1);
-        velocities[i].y = ofMap(noiseY, 0, 1, -1, 1);
+        // Apply smoother Perlin noise to velocity
+        float noiseX = ofNoise(points[i].x * 0.002 + noiseOffset.x, ofGetElapsedTimef() * 0.05);
+        float noiseY = ofNoise(points[i].y * 0.002 + noiseOffset.y, ofGetElapsedTimef() * 0.05);
+        velocities[i].x = ofLerp(velocities[i].x, ofMap(noiseX, 0, 1, -0.5, 0.5), 0.1);  // Smooth interpolation
+        velocities[i].y = ofLerp(velocities[i].y, ofMap(noiseY, 0, 1, -0.5, 0.5), 0.1);  // Smooth interpolation
 
         // Interaction with mouse
         ofPoint mousePos(ofGetMouseX(), ofGetMouseY());
@@ -57,14 +66,11 @@ void ofApp::update() {
     }
 
     // Slowly move noise offset for evolving patterns
-    noiseOffset += ofPoint(0.01, 0.01);
+    noiseOffset += ofPoint(0.005, 0.005);
 }
 
 //--------------------------------------------------------------
 void ofApp::draw() {
-    fbo.begin();
-    ofClear(0, 0, 0, 0); // Clear the FBO
-
     drawGradientBackground();
 
     ofEnableBlendMode(OF_BLENDMODE_ADD);
@@ -72,20 +78,21 @@ void ofApp::draw() {
     drawSymmetry(8); // 8-fold symmetry for even more complexity
 
     ofDisableBlendMode();
-    fbo.end();
-
-    applyPostProcessing(); // Apply blur and vignette effects
-    fbo.draw(0, 0); // Draw the final output to the screen
 }
 
 //--------------------------------------------------------------
 ofColor ofApp::generateRandomColor() {
-    // Generates a random color with high saturation and brightness
-    return ofColor(ofRandom(150, 255), ofRandom(100, 200), ofRandom(200, 255));
+    // Generates a color based on the baseColor with some randomness
+    return baseColor.getLerped(ofColor::white, ofRandom(0.0, 0.3));  // Less variation for smoother transitions
 }
 
 //--------------------------------------------------------------
 void ofApp::drawGradientBackground() {
+    // Animate the gradient background for more visual interest
+    float t = ofGetElapsedTimef();
+    gradientStart = ofColor(20 + 20 * sin(t * 0.05), 20 + 20 * cos(t * 0.07), 60 + 20 * sin(t * 0.05));
+    gradientEnd = ofColor(5 + 5 * sin(t * 0.1), 5 + 5 * cos(t * 0.12), 30 + 10 * sin(t * 0.1));
+
     // Draws a vertical gradient background
     ofMesh mesh;
     mesh.setMode(OF_PRIMITIVE_TRIANGLE_FAN);
@@ -137,23 +144,6 @@ void ofApp::drawParticleTrail(ofPoint point, ofColor color) {
         ofSetColor(color, alpha);
         ofDrawCircle(point.x - velocities[i].x * i * 2, point.y - velocities[i].y * i * 2, maxRadius * 0.5 - i * 0.3);
     }
-}
-
-//--------------------------------------------------------------
-void ofApp::applyPostProcessing() {
-    fbo.begin();
-    
-    // Reduce blur intensity
-    ofEnableBlendMode(OF_BLENDMODE_ALPHA);
-    ofSetColor(255, 255, 255, 50); // Reduce the opacity to decrease blur
-    for (int i = 0; i < 2; i++) {  // Fewer blur layers
-        ofDrawRectangle(0, 0, ofGetWidth(), ofGetHeight());
-    }
-
-    ofSetColor(0, 0, 0, 50); // Semi-transparent black for vignette
-    ofDrawRectangle(0, 0, ofGetWidth(), ofGetHeight());
-
-    fbo.end();
 }
 
 //--------------------------------------------------------------
