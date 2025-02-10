@@ -1,6 +1,7 @@
 #pragma once
 
 #include "ofMain.h"
+#include "ofSoundPlayer.h"
 
 class ofApp : public ofBaseApp {
 public:
@@ -8,15 +9,27 @@ public:
     void update();
     void draw();
     void keyPressed(int key);
-    
+
     ofEasyCam cam;
-    ofMesh mesh;
-    ofShader shader;
+    ofMesh torusMesh;
+    ofMesh sacredGeometryMesh;
+    vector<glm::vec3> particles;
+
+    ofShader glowShader;
+    ofSoundPlayer cosmicSound;
+    float soundLevel;
     
-    int sphereResolution = 150;
-    float noiseFactor = 0.15;
+    int numRings = 60;
+    int numSides = 120;
+    float baseRadiusMajor = 200;
+    float baseRadiusMinor = 60;
+    float radiusMajor;
+    float radiusMinor;
+    float noiseFactor = 0.1;
     float timeOffset = 0.0;
-    
-    glm::vec3 colorA = glm::vec3(1.0, 0.5, 1.0); // Purple-Pink
-    glm::vec3 colorB = glm::vec3(0.1, 0.8, 1.0); // Blue-Cyan
+    float rotationSpeed = 0.02;
+
+    void generateTorus();
+    void generateSacredGeometry();
+    void generateParticles();
 };
