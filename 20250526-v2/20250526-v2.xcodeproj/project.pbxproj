@@ -1,0 +1,2164 @@
+{
+	"archiveVersion": "1",
+	"classes": {},
+	"objectVersion": "54",
+	"objects": {
+		"04D586A1-0C13-4CE5-8F5E-C25F936797CB": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2RopeJoint.cpp",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Dynamics/Joints/b2RopeJoint.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"05C943E1-54C0-47D7-B814-EBB30798D26E": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2ChainShape.cpp",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Collision/Shapes/b2ChainShape.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"0602597F-8205-41FB-A975-165AEFBA6F2F": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2ChainAndPolygonContact.h",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Dynamics/Contacts/b2ChainAndPolygonContact.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"073B5224-E2E7-4CA8-B5DD-122E6B1A8273": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "Box2D.h",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Box2D.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"08175B98-17B0-402A-94BA-F78ED64A8356": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2CircleContact.cpp",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Dynamics/Contacts/b2CircleContact.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"090895B2-78EE-4A7D-AC70-AE43383A13BC": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2World.cpp",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Dynamics/b2World.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"09A1B00C-28D5-4A3C-8FE5-59CC2D67E8D6": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2WorldCallbacks.h",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Dynamics/b2WorldCallbacks.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"09C47EFE-3737-41AF-8484-3D588DF12B88": {
+			"fileRef": "05C943E1-54C0-47D7-B814-EBB30798D26E",
+			"isa": "PBXBuildFile"
+		},
+		"0A7206F4-85D6-419B-81BC-F52DB7B71A2F": {
+			"fileRef": "456F8A27-F07C-4F94-BB70-3C3EF9E51978",
+			"isa": "PBXBuildFile"
+		},
+		"0C236635-5F72-4228-BD6F-C64FB885D0DC": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2FreeList.h",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Common/b2FreeList.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"0EEFC0E4-DD6F-4C5F-B902-97C1337A8D0E": {
+			"fileRef": "1D9BBD66-ECE1-4648-B674-8E208CDC6150",
+			"isa": "PBXBuildFile"
+		},
+		"1068F58F-29C1-429F-B573-FDF4C41F2D26": {
+			"fileRef": "52B02779-F07B-48CE-BB8C-E9702ABAAD26",
+			"isa": "PBXBuildFile"
+		},
+		"107121EB-85BB-4900-AA86-FE8F380B7EF1": {
+			"fileRef": "B8B3490E-10D9-4159-8214-F6E3A5468F23",
+			"isa": "PBXBuildFile"
+		},
+		"1130D18B-94BA-4A2B-9C5E-6A6A612F45B2": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2FrictionJoint.h",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Dynamics/Joints/b2FrictionJoint.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"115C39E6-5A85-4E26-AFA2-53496C70548C": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2Math.h",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Common/b2Math.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"13A20292-D0A0-4A58-8103-792CA457E3A9": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2Collision.h",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Collision/b2Collision.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"15918131-21BD-4AEB-8DEF-EBD23A681BAB": {
+			"fileRef": "5206A886-6849-4665-AB47-4B8E39D8F1A9",
+			"isa": "PBXBuildFile"
+		},
+		"167F1F95-A94E-493E-B9FC-CDC1D0514118": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofxBox2dBaseShape.cpp",
+			"path": "../../../addons/ofxBox2d/src/ofxBox2dBaseShape.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"170B60DA-E853-47BA-87FC-3BF1ECDEDA51": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2Draw.cpp",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Common/b2Draw.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"17C176FA-8267-4CA1-A733-DC4322FD0EB0": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2VoronoiDiagram.cpp",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Particle/b2VoronoiDiagram.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"17E4A73A-9182-4AC1-B6A4-6A2A493ECFEF": {
+			"fileRef": "D237DC54-6254-4518-973F-8F602474B663",
+			"isa": "PBXBuildFile"
+		},
+		"1830B7F2-8F64-4082-99BC-6C65399A7D64": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2DistanceJoint.cpp",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Dynamics/Joints/b2DistanceJoint.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"18DB0074-00CB-4EA7-8935-6FACC1294316": {
+			"fileRef": "C76A6786-6562-4638-B76C-BECC2D4B63DD",
+			"isa": "PBXBuildFile"
+		},
+		"191CD6FA2847E21E0085CBB6": {
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"lastKnownFileType": "text.plist.entitlements",
+			"path": "of.entitlements",
+			"sourceTree": "<group>"
+		},
+		"191EF70929D778A400F35F26": {
+			"isa": "PBXFileReference",
+			"lastKnownFileType": "folder",
+			"name": "openFrameworks",
+			"path": "../../../libs/openFrameworks",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"198B69A3-AB27-4B5C-9A69-306DF1D2BA22": {
+			"fileRef": "BB2BAF71-397A-43FC-B04C-E97AD92AA524",
+			"isa": "PBXBuildFile"
+		},
+		"19A3A705-5EAB-4AC6-AB4B-381623C9833B": {
+			"fileRef": "1DCA9C8A-9C26-4163-8E35-6F60A00D0489",
+			"isa": "PBXBuildFile"
+		},
+		"19B789C429E5AB4A0082E9B8": {
+			"buildActionMask": "2147483647",
+			"files": [],
+			"inputFileListPaths": [],
+			"inputPaths": [],
+			"isa": "PBXShellScriptBuildPhase",
+			"outputFileListPaths": [],
+			"outputPaths": [],
+			"runOnlyForDeploymentPostprocessing": "0",
+			"shellPath": "/bin/sh",
+			"shellScript": "\"$OF_PATH/scripts/osx/xcode_project.sh\"\n",
+			"showEnvVarsInLog": "0"
+		},
+		"19F8A1D7-541F-4BCD-AAAA-7D4D382237B3": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2ParticleSystem.h",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Particle/b2ParticleSystem.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"1A9700E9-37CC-41C1-9691-BC992F950CE1": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2PrismaticJoint.h",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Dynamics/Joints/b2PrismaticJoint.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"1AABD33F-6289-45D9-BC3E-7B308466527C": {
+			"children": [
+				"F6AD2BE6-6EB8-4442-96D7-1013664B424B",
+				"92999338-B38C-4280-BFCD-D6390BEEF1D4",
+				"5B152452-A900-4068-8F47-46C3AEE78662",
+				"D8592EDD-369B-44A3-AA5E-3F8C249198AC",
+				"D237DC54-6254-4518-973F-8F602474B663",
+				"804B0EFE-4DD7-4DC1-8B6C-3E963A82B43C",
+				"51D047C5-8930-4606-95CE-B27A4EE9ED6D",
+				"9CC74D42-9BA1-4AFE-AAF0-59F393AA0795",
+				"3C213298-558C-4562-8E2E-FF1ADDCC57D9",
+				"FBBF3BC8-0F82-49C8-8A71-41F627715F3B",
+				"967AD2C6-1F9A-4D71-AD71-CCC2CF011C3A",
+				"090895B2-78EE-4A7D-AC70-AE43383A13BC",
+				"40978E9D-62D6-4581-81B4-39D892C46A6C",
+				"872BFB6A-DB97-4B9C-AD41-22DB6D852150",
+				"09A1B00C-28D5-4A3C-8FE5-59CC2D67E8D6"
+			],
+			"isa": "PBXGroup",
+			"name": "Dynamics",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Dynamics",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"1BECA7E9-A0DB-4E6A-975F-E7706E270C91": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2PulleyJoint.h",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Dynamics/Joints/b2PulleyJoint.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"1CFB11E7-D0FF-43E2-BBFC-BEE6E6E55567": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2Contact.cpp",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Dynamics/Contacts/b2Contact.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"1D9BBD66-ECE1-4648-B674-8E208CDC6150": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2Triangle.cpp",
+			"path": "../../../addons/ofxBox2d/libs/liquidfun/Contributions/Utilities/ConvexDecomposition/b2Triangle.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"1DCA9C8A-9C26-4163-8E35-6F60A00D0489": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2WheelJoint.cpp",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Dynamics/Joints/b2WheelJoint.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"1E65C39E-5D0E-487F-846E-1A873D6122CB": {
+			"fileRef": "76BB8998-A6ED-44AA-8564-03DC5656DD78",
+			"isa": "PBXBuildFile"
+		},
+		"1FC4BD19-A865-4687-A2B7-A5923A021078": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2Timer.h",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Common/b2Timer.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"22AD248E-35C2-441D-B276-9BD17DCA82A8": {
+			"fileRef": "1CFB11E7-D0FF-43E2-BBFC-BEE6E6E55567",
+			"isa": "PBXBuildFile"
+		},
+		"23624E0D-1D26-423B-8D77-753FDD343628": {
+			"fileRef": "ED447703-4830-4678-B507-A38AB2847AD2",
+			"isa": "PBXBuildFile"
+		},
+		"24DB4A71-762B-4BA6-93E3-C04BA45E93B5": {
+			"fileRef": "EBBF18FB-8D73-4EF5-A3B4-2B7A00412BA5",
+			"isa": "PBXBuildFile"
+		},
+		"255C80AF-1D39-4BDE-8A55-30191850D7DF": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofxBox2dPolygonUtils.cpp",
+			"path": "../../../addons/ofxBox2d/src/ofxBox2dPolygonUtils.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"29C366FB-26D1-4C50-A04C-E238FB4765DA": {
+			"children": [
+				"D1224643-D29C-4836-B1BA-0322D0AA7F59",
+				"4F11A36B-A78B-4F53-B831-B00E58DF5805",
+				"68658D37-52AE-431B-8254-8D1105378426",
+				"638A7466-F827-49F5-83F6-83F42ED57290",
+				"A89E5095-65DE-402E-9151-FBC198AFF065",
+				"E39EED15-BD80-4474-A28C-77400D21A23D",
+				"52B02779-F07B-48CE-BB8C-E9702ABAAD26",
+				"19F8A1D7-541F-4BCD-AAAA-7D4D382237B3",
+				"7533C4AB-1DFE-4AFE-9211-380D48BDD392",
+				"17C176FA-8267-4CA1-A733-DC4322FD0EB0",
+				"32CD2EE1-BB4D-4B31-83AD-448654031432"
+			],
+			"isa": "PBXGroup",
+			"name": "Particle",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Particle",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"29EBDAF9-1E46-419A-9B66-07604F72F1CB": {
+			"fileRef": "B34E0CA5-F461-48AD-8061-9C68CD02FC6E",
+			"isa": "PBXBuildFile"
+		},
+		"2A9D8F6A-FD2E-414F-B6F5-4F5D3568D5D8": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2FrictionJoint.cpp",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Dynamics/Joints/b2FrictionJoint.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"2C61271B-8179-4945-9AB7-EEA8D41713F9": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2StackAllocator.h",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Common/b2StackAllocator.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"2E6D4B22-FD01-4AF4-BB6C-E45934ABDF0F": {
+			"fileRef": "3C213298-558C-4562-8E2E-FF1ADDCC57D9",
+			"isa": "PBXBuildFile"
+		},
+		"2E993C98-92BF-4D09-AF96-B0ED463E9C34": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2Math.cpp",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Common/b2Math.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"2EB8E953-828A-425B-8502-0A301A828E18": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofxBox2dJoint.cpp",
+			"path": "../../../addons/ofxBox2d/src/ofxBox2dJoint.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"2F086E0F-E640-4F73-BDD1-80A72C129D32": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2CircleContact.h",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Dynamics/Contacts/b2CircleContact.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"303664BA-634F-4C49-9953-FF99DFEF97C9": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2RevoluteJoint.h",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Dynamics/Joints/b2RevoluteJoint.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"32CD2EE1-BB4D-4B31-83AD-448654031432": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2VoronoiDiagram.h",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Particle/b2VoronoiDiagram.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"3331A4F2-A07D-4FAE-9196-C217D2800923": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2WheelJoint.h",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Dynamics/Joints/b2WheelJoint.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"3456AAE2-D2FA-4CAA-BED7-850A365C90BC": {
+			"fileRef": "91797E4D-DD7C-4C06-9F5A-623B74B631D0",
+			"isa": "PBXBuildFile"
+		},
+		"361022E0-28C9-4BEA-950F-47FD6FDA9793": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2WeldJoint.h",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Dynamics/Joints/b2WeldJoint.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"37EEEF30-46D3-475A-ADBF-D1E17097E221": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2DynamicTree.h",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Collision/b2DynamicTree.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"3823E51A-C086-44BF-88EE-D631E079E87E": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofxBox2dParticleSystem.cpp",
+			"path": "../../../addons/ofxBox2d/src/ofxBox2dParticleSystem.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"383A5BE6-D53B-4458-8262-443BC6EFF982": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2ChainAndPolygonContact.cpp",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Dynamics/Contacts/b2ChainAndPolygonContact.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"39BDD6CB-7402-40BD-BFA7-70DC60494E69": {
+			"fileRef": "51D047C5-8930-4606-95CE-B27A4EE9ED6D",
+			"isa": "PBXBuildFile"
+		},
+		"3ABED305-A3B2-4D6B-BBF7-EC211CC242D0": {
+			"fileRef": "167F1F95-A94E-493E-B9FC-CDC1D0514118",
+			"isa": "PBXBuildFile"
+		},
+		"3C213298-558C-4562-8E2E-FF1ADDCC57D9": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2Island.cpp",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Dynamics/b2Island.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"3EE68F86-F588-4EC1-BE7F-8530A0D667D1": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2Rope.h",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Rope/b2Rope.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"40978E9D-62D6-4581-81B4-39D892C46A6C": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2World.h",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Dynamics/b2World.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"41981116-BE05-4E77-AAF7-DAB5030C9134": {
+			"fileRef": "BDA6753D-AB5E-4E09-BDB8-18CB2F81E416",
+			"isa": "PBXBuildFile"
+		},
+		"4203B550-4DAE-4106-9A3B-389AA2DC6DA1": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2PulleyJoint.cpp",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Dynamics/Joints/b2PulleyJoint.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"428567F0-0DB2-40AD-BF8F-D0518ED82FAE": {
+			"fileRef": "E3DF5BAE-4686-4C5A-9502-81CEC9059921",
+			"isa": "PBXBuildFile"
+		},
+		"4430F5B8-8D14-465E-A200-AF88D7A4A2E9": {
+			"fileRef": "04D586A1-0C13-4CE5-8F5E-C25F936797CB",
+			"isa": "PBXBuildFile"
+		},
+		"4435BB49-E2F3-4942-9B7E-B95996FDF6F8": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofxBox2dUtils.cpp",
+			"path": "../../../addons/ofxBox2d/src/ofxBox2dUtils.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"44432849-A445-4DE6-8214-172B62638D18": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofxBox2dBaseShape.h",
+			"path": "../../../addons/ofxBox2d/src/ofxBox2dBaseShape.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"44A2EA19-BD8D-4B00-8A28-82F71C4698E0": {
+			"fileRef": "4203B550-4DAE-4106-9A3B-389AA2DC6DA1",
+			"isa": "PBXBuildFile"
+		},
+		"456F8A27-F07C-4F94-BB70-3C3EF9E51978": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2WeldJoint.cpp",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Dynamics/Joints/b2WeldJoint.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"4636B07E-14D9-440A-9B43-FF9D3043BE43": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2FreeList.cpp",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Common/b2FreeList.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"4681BD79-0619-4FCF-B191-82295C878B05": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2BroadPhase.h",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Collision/b2BroadPhase.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"483D3BEC-594E-4257-AF63-1238620CAF56": {
+			"fileRef": "81479BDD-9586-45CF-9036-56C4CE124133",
+			"isa": "PBXBuildFile"
+		},
+		"489BB41D-02BC-42F3-95CD-274A125012DC": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2MotorJoint.h",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Dynamics/Joints/b2MotorJoint.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"489CAB94-7E48-484A-ACEB-04F2A0D39AB9": {
+			"fileRef": "2EB8E953-828A-425B-8502-0A301A828E18",
+			"isa": "PBXBuildFile"
+		},
+		"48BC0944-364A-42AB-A4A3-C63522AA850D": {
+			"children": [
+				"8729C88F-5237-4AA3-B286-DD0B483172D3",
+				"88128E6D-6B12-4BB8-8D9D-7AD319082935"
+			],
+			"isa": "PBXGroup",
+			"name": "ofxBox2d",
+			"path": "../../../addons/ofxBox2d",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"493A9DC3-8426-44BB-9A11-848615D9327D": {
+			"fileRef": "9AC0A233-4FFD-4A03-B3BF-17E4198D9430",
+			"isa": "PBXBuildFile"
+		},
+		"4A01D323-4773-4419-9B87-0ABB929F6C34": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2EdgeShape.h",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Collision/Shapes/b2EdgeShape.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"4A0CA554-D8A7-498B-800D-8A08D098F3F6": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2MouseJoint.h",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Dynamics/Joints/b2MouseJoint.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"4A81574D-F2E3-4057-B788-F6E3EFA6829B": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2PolygonShape.h",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Collision/Shapes/b2PolygonShape.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"4B9052A5-F049-4683-982B-1E1205CD0277": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofxBox2dEdge.cpp",
+			"path": "../../../addons/ofxBox2d/src/ofxBox2dEdge.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"4BB87AE7-E2B9-41A8-8A71-D6941A828C4B": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofxBox2dConvexPoly.cpp",
+			"path": "../../../addons/ofxBox2d/src/ofxBox2dConvexPoly.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"4D65E87A-CD62-45C0-8C49-A2AFD810EAEC": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofxBox2dRect.cpp",
+			"path": "../../../addons/ofxBox2d/src/ofxBox2dRect.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"4E613C5E-1917-43DF-81AB-2C1608BA3D9B": {
+			"fileRef": "170B60DA-E853-47BA-87FC-3BF1ECDEDA51",
+			"isa": "PBXBuildFile"
+		},
+		"4F11A36B-A78B-4F53-B831-B00E58DF5805": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2Particle.h",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Particle/b2Particle.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"5067CFA2-08F1-4627-A07E-182129C95DE7": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2ContactSolver.cpp",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Dynamics/Contacts/b2ContactSolver.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"51D047C5-8930-4606-95CE-B27A4EE9ED6D": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2Fixture.cpp",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Dynamics/b2Fixture.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"51D6EB58-D639-4244-A4AE-1BBBF7FC208A": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "Fixed.h",
+			"path": "../../../addons/ofxBox2d/libs/liquidfun/Contributions/Enhancements/FixedPoint/Fixed.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"5206A886-6849-4665-AB47-4B8E39D8F1A9": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2StackAllocator.cpp",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Common/b2StackAllocator.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"52767DE2-1E60-4017-9E67-0264AC509E64": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2PolygonShape.cpp",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Collision/Shapes/b2PolygonShape.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"52B02779-F07B-48CE-BB8C-E9702ABAAD26": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2ParticleSystem.cpp",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Particle/b2ParticleSystem.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"56B6EDC4-AE27-412F-9BB8-E66E69BB4BE7": {
+			"children": [
+				"71128CBD-29C1-414A-B3F7-19D266839677"
+			],
+			"isa": "PBXGroup",
+			"name": "liquidfun",
+			"path": "../../../addons/ofxBox2d/libs/liquidfun",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"5819128A-A8EB-4B36-A9E5-3D442062203C": {
+			"fileRef": "17C176FA-8267-4CA1-A733-DC4322FD0EB0",
+			"isa": "PBXBuildFile"
+		},
+		"5B152452-A900-4068-8F47-46C3AEE78662": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2Body.cpp",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Dynamics/b2Body.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"5E32F4DC-656D-43EE-9AAD-6339008B9A48": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2MotorJoint.cpp",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Dynamics/Joints/b2MotorJoint.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"61BBA3B6-5AE3-4728-8FCD-E02E4516BDC7": {
+			"fileRef": "68658D37-52AE-431B-8254-8D1105378426",
+			"isa": "PBXBuildFile"
+		},
+		"638A7466-F827-49F5-83F6-83F42ED57290": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2ParticleAssembly.h",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Particle/b2ParticleAssembly.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"66482727-5E90-4D58-80BF-3285E70C92CF": {
+			"children": [
+				"BA1679A7-6A4E-41F9-A214-3A4B160F961F"
+			],
+			"isa": "PBXGroup",
+			"name": "Enhancements",
+			"path": "../../../addons/ofxBox2d/libs/liquidfun/Contributions/Enhancements",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"66589018-C542-42CE-9450-A17573C86C22": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2Polygon.cpp",
+			"path": "../../../addons/ofxBox2d/libs/liquidfun/Contributions/Utilities/ConvexDecomposition/b2Polygon.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"66EF14DA-DCEE-4514-954A-B749A21480A8": {
+			"fileRef": "C3756EEB-68F0-4D0A-B8CB-746856FAB0BB",
+			"isa": "PBXBuildFile"
+		},
+		"6770F4A1-5781-48FD-BF12-010CF9605DA9": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofxBox2dParticleSystem.h",
+			"path": "../../../addons/ofxBox2d/src/ofxBox2dParticleSystem.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"68658D37-52AE-431B-8254-8D1105378426": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2ParticleAssembly.cpp",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Particle/b2ParticleAssembly.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"6A234259-0A45-4C1D-A6E8-5744A0140D78": {
+			"fileRef": "8AAA9AA7-D1F4-40F2-9307-AF4C4C153763",
+			"isa": "PBXBuildFile"
+		},
+		"6BFB38A8-2C6C-405F-899E-3F336AC4F22E": {
+			"children": [
+				"073B5224-E2E7-4CA8-B5DD-122E6B1A8273",
+				"DF4D3AA7-ADF7-452E-8DBD-442BB453C7EC",
+				"C3C70E05-4C54-4B6D-986E-42665EC2F7FB",
+				"1AABD33F-6289-45D9-BC3E-7B308466527C",
+				"29C366FB-26D1-4C50-A04C-E238FB4765DA",
+				"9B27BA5C-45F0-4A46-BA7B-19A058469214"
+			],
+			"isa": "PBXGroup",
+			"name": "Box2D",
+			"path": "../../../addons/ofxBox2d/libs/Box2D",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"6C2EBDE5-BE27-435D-8C00-948CFCB7364A": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2RevoluteJoint.cpp",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Dynamics/Joints/b2RevoluteJoint.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"6F00B036-B94C-4DCF-8522-20FA85956A8C": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2TrackedBlock.h",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Common/b2TrackedBlock.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"6F489FC5-4CE7-4FAE-B715-9D5C7890106E": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2ChainShape.h",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Collision/Shapes/b2ChainShape.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"71128CBD-29C1-414A-B3F7-19D266839677": {
+			"children": [
+				"66482727-5E90-4D58-80BF-3285E70C92CF",
+				"D41E7D93-C3B8-4E46-A84A-12941D1B072C"
+			],
+			"isa": "PBXGroup",
+			"name": "Contributions",
+			"path": "../../../addons/ofxBox2d/libs/liquidfun/Contributions",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"7327831A-4937-41F1-907F-4EE3B5094DFD": {
+			"fileRef": "872BFB6A-DB97-4B9C-AD41-22DB6D852150",
+			"isa": "PBXBuildFile"
+		},
+		"737300CE-D157-46E6-ADDC-96218B4090BB": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2TimeOfImpact.h",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Collision/b2TimeOfImpact.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"7533C4AB-1DFE-4AFE-9211-380D48BDD392": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2StackQueue.h",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Particle/b2StackQueue.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"7578D0D5-87B3-4B7B-A504-A2301ABBA26A": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofxBox2dPolygon.h",
+			"path": "../../../addons/ofxBox2d/src/ofxBox2dPolygon.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"76BB8998-A6ED-44AA-8564-03DC5656DD78": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2EdgeAndCircleContact.cpp",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Dynamics/Contacts/b2EdgeAndCircleContact.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"76CBF200-ABA1-4DEA-A600-4A8654A83769": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofxBox2dEdge.h",
+			"path": "../../../addons/ofxBox2d/src/ofxBox2dEdge.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"781BA4D3-969D-4AF7-8351-67F7B903B991": {
+			"fileRef": "C4430A28-E976-4106-AEC4-0A86227EB7E6",
+			"isa": "PBXBuildFile"
+		},
+		"7904CCBB-BA62-491E-918C-633259EC6015": {
+			"fileRef": "D45BD882-725E-4C67-9C7A-4C3E4701A162",
+			"isa": "PBXBuildFile"
+		},
+		"7A979964-25C0-4B29-B642-AD3A7B8600F2": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofxBox2d.cpp",
+			"path": "../../../addons/ofxBox2d/src/ofxBox2d.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"7C1E5AFE-ED4E-4540-8C19-CF29B0C33026": {
+			"fileRef": "A89E5095-65DE-402E-9151-FBC198AFF065",
+			"isa": "PBXBuildFile"
+		},
+		"7D406CAE-B8C8-4E49-A5CB-7AD0CC971700": {
+			"fileRef": "5067CFA2-08F1-4627-A07E-182129C95DE7",
+			"isa": "PBXBuildFile"
+		},
+		"7F4388A6-F1F4-4231-B9E3-3E2E572D4613": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2IntrusiveList.h",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Common/b2IntrusiveList.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"804B0EFE-4DD7-4DC1-8B6C-3E963A82B43C": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2ContactManager.h",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Dynamics/b2ContactManager.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"80F73804-C791-4F54-8B5B-96A2EEB243F8": {
+			"fileRef": "08175B98-17B0-402A-94BA-F78ED64A8356",
+			"isa": "PBXBuildFile"
+		},
+		"8120C8E6-B88A-434B-ABD2-EA7EA80C0BD9": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2ContactSolver.h",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Dynamics/Contacts/b2ContactSolver.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"81479BDD-9586-45CF-9036-56C4CE124133": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2Distance.cpp",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Collision/b2Distance.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"82496CEE-AC94-4E18-A312-AC632CDE7D45": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2PolygonContact.h",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Dynamics/Contacts/b2PolygonContact.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"8472D3BC-1DB7-4810-B948-2C3DFA4D9C3F": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2Contact.h",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Dynamics/Contacts/b2Contact.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"860F4FA6-8EE5-4EFE-8DF9-E2A689E70469": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2TrackedBlock.cpp",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Common/b2TrackedBlock.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"8647097E-66BB-4B23-8CF7-2CBB64D2F916": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2Settings.cpp",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Common/b2Settings.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"86F28B54-F755-464B-BFB4-065F0A9A61C0": {
+			"fileRef": "4636B07E-14D9-440A-9B43-FF9D3043BE43",
+			"isa": "PBXBuildFile"
+		},
+		"8729C88F-5237-4AA3-B286-DD0B483172D3": {
+			"children": [
+				"6BFB38A8-2C6C-405F-899E-3F336AC4F22E",
+				"D89546BD-8187-4D0D-99F3-1848427940C0",
+				"56B6EDC4-AE27-412F-9BB8-E66E69BB4BE7"
+			],
+			"isa": "PBXGroup",
+			"name": "libs",
+			"path": "../../../addons/ofxBox2d/libs",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"872BFB6A-DB97-4B9C-AD41-22DB6D852150": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2WorldCallbacks.cpp",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Dynamics/b2WorldCallbacks.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"88128E6D-6B12-4BB8-8D9D-7AD319082935": {
+			"children": [
+				"7A979964-25C0-4B29-B642-AD3A7B8600F2",
+				"B6C04C0D-A197-4971-974E-8131E8849608",
+				"167F1F95-A94E-493E-B9FC-CDC1D0514118",
+				"44432849-A445-4DE6-8214-172B62638D18",
+				"A832D18A-4C50-403D-AC1C-B20290A97299",
+				"B85EE882-95D8-4B76-8E2B-555007DFAFC3",
+				"CDAB6AF5-033D-405B-A8BD-A64BE847C6AA",
+				"4BB87AE7-E2B9-41A8-8A71-D6941A828C4B",
+				"CB823CDC-63AA-4AF8-BDED-ADC11A4297B5",
+				"4B9052A5-F049-4683-982B-1E1205CD0277",
+				"76CBF200-ABA1-4DEA-A600-4A8654A83769",
+				"2EB8E953-828A-425B-8502-0A301A828E18",
+				"B728DF68-B103-484B-A503-B5AF9D83CCEF",
+				"3823E51A-C086-44BF-88EE-D631E079E87E",
+				"6770F4A1-5781-48FD-BF12-010CF9605DA9",
+				"BB2BAF71-397A-43FC-B04C-E97AD92AA524",
+				"7578D0D5-87B3-4B7B-A504-A2301ABBA26A",
+				"255C80AF-1D39-4BDE-8A55-30191850D7DF",
+				"B26CD217-F066-4E05-B05F-4AC8985D713E",
+				"4D65E87A-CD62-45C0-8C49-A2AFD810EAEC",
+				"CD909F83-4E67-4FA3-8AEA-2EB2EA4CE1BA",
+				"D45BD882-725E-4C67-9C7A-4C3E4701A162",
+				"BEF3E282-733C-4374-BA52-14101B8B1F9B",
+				"4435BB49-E2F3-4942-9B7E-B95996FDF6F8",
+				"B80230C7-7098-436F-830F-0E873A8AADC4"
+			],
+			"isa": "PBXGroup",
+			"name": "src",
+			"path": "../../../addons/ofxBox2d/src",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"8AAA9AA7-D1F4-40F2-9307-AF4C4C153763": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2GearJoint.cpp",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Dynamics/Joints/b2GearJoint.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"8AECC590-6905-458C-8A48-EAE63A9031C6": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2BlockAllocator.h",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Common/b2BlockAllocator.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"8D3CE84F-BB68-4F9E-B93C-CD6CCCB691A9": {
+			"fileRef": "C261095B-F913-45A7-BCBB-60800C7EEAD1",
+			"isa": "PBXBuildFile"
+		},
+		"8D579B03-488C-4DD9-BC38-1E1CF90276D3": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2DistanceJoint.h",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Dynamics/Joints/b2DistanceJoint.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"8E06580C-6598-404F-9904-11534D0B52BF": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2Draw.h",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Common/b2Draw.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"8E44CBDD-D80E-47F6-8283-1B030900947B": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2Rope.cpp",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Rope/b2Rope.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"8E4CE352-27AE-4EAF-975A-05E00616C989": {
+			"children": [
+				"05C943E1-54C0-47D7-B814-EBB30798D26E",
+				"6F489FC5-4CE7-4FAE-B715-9D5C7890106E",
+				"C4430A28-E976-4106-AEC4-0A86227EB7E6",
+				"A0A3E768-3C57-4ADD-8CD2-9C12F8462C41",
+				"ED447703-4830-4678-B507-A38AB2847AD2",
+				"4A01D323-4773-4419-9B87-0ABB929F6C34",
+				"52767DE2-1E60-4017-9E67-0264AC509E64",
+				"4A81574D-F2E3-4057-B788-F6E3EFA6829B",
+				"9B4B9DE5-48A0-42D3-A798-CA2D18B18C3C"
+			],
+			"isa": "PBXGroup",
+			"name": "Shapes",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Collision/Shapes",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"91797E4D-DD7C-4C06-9F5A-623B74B631D0": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2Collision.cpp",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Collision/b2Collision.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"91AEF0D4-71CC-4FB5-AEAB-6AF546C44387": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2RopeJoint.h",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Dynamics/Joints/b2RopeJoint.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"91DC5D92-9D42-4A8F-8794-C2BCBF8EB4D6": {
+			"fileRef": "D32FE517-B1C8-4768-8EEC-058881E7AE60",
+			"isa": "PBXBuildFile"
+		},
+		"92999338-B38C-4280-BFCD-D6390BEEF1D4": {
+			"children": [
+				"1830B7F2-8F64-4082-99BC-6C65399A7D64",
+				"8D579B03-488C-4DD9-BC38-1E1CF90276D3",
+				"2A9D8F6A-FD2E-414F-B6F5-4F5D3568D5D8",
+				"1130D18B-94BA-4A2B-9C5E-6A6A612F45B2",
+				"8AAA9AA7-D1F4-40F2-9307-AF4C4C153763",
+				"BC7E32CA-C406-4D07-BF4D-F83390C89467",
+				"F5373967-6E71-4916-809C-16FC64E57BD4",
+				"97F36A19-B796-4E1F-8D1F-87AC3CD674C4",
+				"5E32F4DC-656D-43EE-9AAD-6339008B9A48",
+				"489BB41D-02BC-42F3-95CD-274A125012DC",
+				"BD645516-34FF-4FAE-9F75-2F250C511F78",
+				"4A0CA554-D8A7-498B-800D-8A08D098F3F6",
+				"C3756EEB-68F0-4D0A-B8CB-746856FAB0BB",
+				"1A9700E9-37CC-41C1-9691-BC992F950CE1",
+				"4203B550-4DAE-4106-9A3B-389AA2DC6DA1",
+				"1BECA7E9-A0DB-4E6A-975F-E7706E270C91",
+				"6C2EBDE5-BE27-435D-8C00-948CFCB7364A",
+				"303664BA-634F-4C49-9953-FF99DFEF97C9",
+				"04D586A1-0C13-4CE5-8F5E-C25F936797CB",
+				"91AEF0D4-71CC-4FB5-AEAB-6AF546C44387",
+				"456F8A27-F07C-4F94-BB70-3C3EF9E51978",
+				"361022E0-28C9-4BEA-950F-47FD6FDA9793",
+				"1DCA9C8A-9C26-4163-8E35-6F60A00D0489",
+				"3331A4F2-A07D-4FAE-9196-C217D2800923"
+			],
+			"isa": "PBXGroup",
+			"name": "Joints",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Dynamics/Joints",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"944CC7E2-F066-4A6C-BC95-F53F5A3D1341": {
+			"fileRef": "4B9052A5-F049-4683-982B-1E1205CD0277",
+			"isa": "PBXBuildFile"
+		},
+		"94CBC2B2-1F14-4DC1-9399-6B468DAA026B": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2GrowableStack.h",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Common/b2GrowableStack.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"967AD2C6-1F9A-4D71-AD71-CCC2CF011C3A": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2TimeStep.h",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Dynamics/b2TimeStep.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"97619A2A-6442-474A-867B-27CAAD57BCAE": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "triangle.h",
+			"path": "../../../addons/ofxBox2d/libs/Triangle/triangle.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"979F7F6F-377E-4BF8-B032-39D83ACB155F": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2EdgeAndCircleContact.h",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Dynamics/Contacts/b2EdgeAndCircleContact.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"97F36A19-B796-4E1F-8D1F-87AC3CD674C4": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2Joint.h",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Dynamics/Joints/b2Joint.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"981A4301-89DC-4CE0-A178-39496EB2908B": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2Polygon.h",
+			"path": "../../../addons/ofxBox2d/libs/liquidfun/Contributions/Utilities/ConvexDecomposition/b2Polygon.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"9A52B8D1-34AB-4C42-B410-BD614364228E": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2Stat.cpp",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Common/b2Stat.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"9AC0A233-4FFD-4A03-B3BF-17E4198D9430": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2ChainAndCircleContact.cpp",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Dynamics/Contacts/b2ChainAndCircleContact.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"9B27BA5C-45F0-4A46-BA7B-19A058469214": {
+			"children": [
+				"8E44CBDD-D80E-47F6-8283-1B030900947B",
+				"3EE68F86-F588-4EC1-BE7F-8530A0D667D1"
+			],
+			"isa": "PBXGroup",
+			"name": "Rope",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Rope",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"9B4B9DE5-48A0-42D3-A798-CA2D18B18C3C": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2Shape.h",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Collision/Shapes/b2Shape.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"9BA6F5B1-C339-4745-828C-154A439C9FDB": {
+			"children": [
+				"66589018-C542-42CE-9450-A17573C86C22",
+				"981A4301-89DC-4CE0-A178-39496EB2908B",
+				"1D9BBD66-ECE1-4648-B674-8E208CDC6150",
+				"CE9B528F-EABB-48B3-AEBE-AE735A967A1A"
+			],
+			"isa": "PBXGroup",
+			"name": "ConvexDecomposition",
+			"path": "../../../addons/ofxBox2d/libs/liquidfun/Contributions/Utilities/ConvexDecomposition",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"9CC74D42-9BA1-4AFE-AAF0-59F393AA0795": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2Fixture.h",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Dynamics/b2Fixture.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"9D4DCD6B-38BC-4E4A-A63C-B646CFA6371A": {
+			"fileRef": "8647097E-66BB-4B23-8CF7-2CBB64D2F916",
+			"isa": "PBXBuildFile"
+		},
+		"A072CA3F-DA54-425A-B848-61AD923369D4": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "jtypes.h",
+			"path": "../../../addons/ofxBox2d/libs/liquidfun/Contributions/Enhancements/FixedPoint/jtypes.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"A0A3E768-3C57-4ADD-8CD2-9C12F8462C41": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2CircleShape.h",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Collision/Shapes/b2CircleShape.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"A4D884A3-5980-4DAE-BF76-6764284334E8": {
+			"fileRef": "D1987E31-251B-48E8-8661-DF6766594DCD",
+			"isa": "PBXBuildFile"
+		},
+		"A6A55033-4B6D-4DB3-A255-8DAA0859D07F": {
+			"fileRef": "3823E51A-C086-44BF-88EE-D631E079E87E",
+			"isa": "PBXBuildFile"
+		},
+		"A832D18A-4C50-403D-AC1C-B20290A97299": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofxBox2dCircle.cpp",
+			"path": "../../../addons/ofxBox2d/src/ofxBox2dCircle.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"A8442524-2466-4974-B3EA-6FD3D059EBBC": {
+			"fileRef": "FEBD5F7D-7E14-4EFA-BE04-ED39B03532D0",
+			"isa": "PBXBuildFile"
+		},
+		"A882C743-6722-4A88-B26D-441B6F4C0E17": {
+			"fileRef": "D1224643-D29C-4836-B1BA-0322D0AA7F59",
+			"isa": "PBXBuildFile"
+		},
+		"A89E5095-65DE-402E-9151-FBC198AFF065": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2ParticleGroup.cpp",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Particle/b2ParticleGroup.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"A94A7B20-940E-4B36-955E-067428026FD8": {
+			"fileRef": "E5AA6618-D28B-440B-BC34-BF20559093CA",
+			"isa": "PBXBuildFile"
+		},
+		"B24F926C-D064-428F-8CA1-6511D1B2CB3F": {
+			"fileRef": "BD645516-34FF-4FAE-9F75-2F250C511F78",
+			"isa": "PBXBuildFile"
+		},
+		"B26CD217-F066-4E05-B05F-4AC8985D713E": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofxBox2dPolygonUtils.h",
+			"path": "../../../addons/ofxBox2d/src/ofxBox2dPolygonUtils.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"B3246BDE-5A23-47E2-B64B-E02503C2D333": {
+			"fileRef": "7A979964-25C0-4B29-B642-AD3A7B8600F2",
+			"isa": "PBXBuildFile"
+		},
+		"B34E0CA5-F461-48AD-8061-9C68CD02FC6E": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2PolygonContact.cpp",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Dynamics/Contacts/b2PolygonContact.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"B47EF6F5-90D8-4833-BA5C-E5B3A36132CB": {
+			"fileRef": "4435BB49-E2F3-4942-9B7E-B95996FDF6F8",
+			"isa": "PBXBuildFile"
+		},
+		"B6C04C0D-A197-4971-974E-8131E8849608": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofxBox2d.h",
+			"path": "../../../addons/ofxBox2d/src/ofxBox2d.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"B728DF68-B103-484B-A503-B5AF9D83CCEF": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofxBox2dJoint.h",
+			"path": "../../../addons/ofxBox2d/src/ofxBox2dJoint.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"B80230C7-7098-436F-830F-0E873A8AADC4": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofxBox2dUtils.h",
+			"path": "../../../addons/ofxBox2d/src/ofxBox2dUtils.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"B85EE882-95D8-4B76-8E2B-555007DFAFC3": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofxBox2dCircle.h",
+			"path": "../../../addons/ofxBox2d/src/ofxBox2dCircle.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"B8B3490E-10D9-4159-8214-F6E3A5468F23": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2TimeOfImpact.cpp",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Collision/b2TimeOfImpact.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"B8D0E43C-16E5-4EC6-815A-80099704D90C": {
+			"fileRef": "4BB87AE7-E2B9-41A8-8A71-D6941A828C4B",
+			"isa": "PBXBuildFile"
+		},
+		"BA020743-8E02-4A17-B266-443A51916FA3": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2Settings.h",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Common/b2Settings.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"BA1679A7-6A4E-41F9-A214-3A4B160F961F": {
+			"children": [
+				"51D6EB58-D639-4244-A4AE-1BBBF7FC208A",
+				"A072CA3F-DA54-425A-B848-61AD923369D4"
+			],
+			"isa": "PBXGroup",
+			"name": "FixedPoint",
+			"path": "../../../addons/ofxBox2d/libs/liquidfun/Contributions/Enhancements/FixedPoint",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"BB2BAF71-397A-43FC-B04C-E97AD92AA524": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofxBox2dPolygon.cpp",
+			"path": "../../../addons/ofxBox2d/src/ofxBox2dPolygon.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"BB4B014C10F69532006C3DED": {
+			"children": [
+				"48BC0944-364A-42AB-A4A3-C63522AA850D"
+			],
+			"isa": "PBXGroup",
+			"name": "addons",
+			"path": "../../../addons",
+			"sourceTree": "<group>"
+		},
+		"BC12B8C3-FEC8-41F5-9EBB-9A3F7A17B800": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2GrowableBuffer.h",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Common/b2GrowableBuffer.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"BC7E32CA-C406-4D07-BF4D-F83390C89467": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2GearJoint.h",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Dynamics/Joints/b2GearJoint.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"BD005DE0-8BE5-44A3-B1E2-1CA5F9559B89": {
+			"fileRef": "F5373967-6E71-4916-809C-16FC64E57BD4",
+			"isa": "PBXBuildFile"
+		},
+		"BD645516-34FF-4FAE-9F75-2F250C511F78": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2MouseJoint.cpp",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Dynamics/Joints/b2MouseJoint.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"BDA6753D-AB5E-4E09-BDB8-18CB2F81E416": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2CollideCircle.cpp",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Collision/b2CollideCircle.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"BEF3E282-733C-4374-BA52-14101B8B1F9B": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofxBox2dRender.h",
+			"path": "../../../addons/ofxBox2d/src/ofxBox2dRender.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"BEF92694-1343-4E24-9444-5B2A9E749454": {
+			"fileRef": "66589018-C542-42CE-9450-A17573C86C22",
+			"isa": "PBXBuildFile"
+		},
+		"C05F1EAB-8A29-4691-9373-0717498680BF": {
+			"fileRef": "2E993C98-92BF-4D09-AF96-B0ED463E9C34",
+			"isa": "PBXBuildFile"
+		},
+		"C15937D3-91FA-41AC-9B0C-37AC8B12B67D": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2ChainAndCircleContact.h",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Dynamics/Contacts/b2ChainAndCircleContact.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"C19209CE-21A5-4408-BE6E-F3639273F98E": {
+			"fileRef": "383A5BE6-D53B-4458-8262-443BC6EFF982",
+			"isa": "PBXBuildFile"
+		},
+		"C261095B-F913-45A7-BCBB-60800C7EEAD1": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2EdgeAndPolygonContact.cpp",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Dynamics/Contacts/b2EdgeAndPolygonContact.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"C2E7C3B3-3175-44D8-A3CB-14AB5FADC6F9": {
+			"fileRef": "8E44CBDD-D80E-47F6-8283-1B030900947B",
+			"isa": "PBXBuildFile"
+		},
+		"C3756EEB-68F0-4D0A-B8CB-746856FAB0BB": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2PrismaticJoint.cpp",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Dynamics/Joints/b2PrismaticJoint.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"C3C70E05-4C54-4B6D-986E-42665EC2F7FB": {
+			"children": [
+				"C76A6786-6562-4638-B76C-BECC2D4B63DD",
+				"8AECC590-6905-458C-8A48-EAE63A9031C6",
+				"170B60DA-E853-47BA-87FC-3BF1ECDEDA51",
+				"8E06580C-6598-404F-9904-11534D0B52BF",
+				"4636B07E-14D9-440A-9B43-FF9D3043BE43",
+				"0C236635-5F72-4228-BD6F-C64FB885D0DC",
+				"BC12B8C3-FEC8-41F5-9EBB-9A3F7A17B800",
+				"94CBC2B2-1F14-4DC1-9399-6B468DAA026B",
+				"7F4388A6-F1F4-4231-B9E3-3E2E572D4613",
+				"2E993C98-92BF-4D09-AF96-B0ED463E9C34",
+				"115C39E6-5A85-4E26-AFA2-53496C70548C",
+				"8647097E-66BB-4B23-8CF7-2CBB64D2F916",
+				"BA020743-8E02-4A17-B266-443A51916FA3",
+				"F599A239-5729-4ED2-B85C-B6827B80D50E",
+				"5206A886-6849-4665-AB47-4B8E39D8F1A9",
+				"2C61271B-8179-4945-9AB7-EEA8D41713F9",
+				"9A52B8D1-34AB-4C42-B410-BD614364228E",
+				"EB572167-EC42-494E-B16E-762E06096F61",
+				"EBBF18FB-8D73-4EF5-A3B4-2B7A00412BA5",
+				"1FC4BD19-A865-4687-A2B7-A5923A021078",
+				"860F4FA6-8EE5-4EFE-8DF9-E2A689E70469",
+				"6F00B036-B94C-4DCF-8522-20FA85956A8C"
+			],
+			"isa": "PBXGroup",
+			"name": "Common",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Common",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"C4430A28-E976-4106-AEC4-0A86227EB7E6": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2CircleShape.cpp",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Collision/Shapes/b2CircleShape.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"C76A6786-6562-4638-B76C-BECC2D4B63DD": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2BlockAllocator.cpp",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Common/b2BlockAllocator.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"CA83A4FE-EAA8-4EB9-8F03-480DD5E9BA70": {
+			"fileRef": "2A9D8F6A-FD2E-414F-B6F5-4F5D3568D5D8",
+			"isa": "PBXBuildFile"
+		},
+		"CAF0F8B4-B9F9-4584-9026-8709B3598B80": {
+			"fileRef": "5E32F4DC-656D-43EE-9AAD-6339008B9A48",
+			"isa": "PBXBuildFile"
+		},
+		"CB823CDC-63AA-4AF8-BDED-ADC11A4297B5": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofxBox2dConvexPoly.h",
+			"path": "../../../addons/ofxBox2d/src/ofxBox2dConvexPoly.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"CCE4621D-A12E-4F3B-8C50-45EEDF5E6DB6": {
+			"fileRef": "090895B2-78EE-4A7D-AC70-AE43383A13BC",
+			"isa": "PBXBuildFile"
+		},
+		"CD909F83-4E67-4FA3-8AEA-2EB2EA4CE1BA": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofxBox2dRect.h",
+			"path": "../../../addons/ofxBox2d/src/ofxBox2dRect.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"CDAB6AF5-033D-405B-A8BD-A64BE847C6AA": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofxBox2dContactListener.h",
+			"path": "../../../addons/ofxBox2d/src/ofxBox2dContactListener.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"CE9B528F-EABB-48B3-AEBE-AE735A967A1A": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2Triangle.h",
+			"path": "../../../addons/ofxBox2d/libs/liquidfun/Contributions/Utilities/ConvexDecomposition/b2Triangle.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"CEDDFD7C-5154-4893-8DBE-643238127A81": {
+			"fileRef": "5B152452-A900-4068-8F47-46C3AEE78662",
+			"isa": "PBXBuildFile"
+		},
+		"D03D1E5E-0AE7-47C4-B3FA-D6F860834732": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2PolygonAndCircleContact.h",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Dynamics/Contacts/b2PolygonAndCircleContact.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"D1224643-D29C-4836-B1BA-0322D0AA7F59": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2Particle.cpp",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Particle/b2Particle.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"D1987E31-251B-48E8-8661-DF6766594DCD": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "triangle.cpp",
+			"path": "../../../addons/ofxBox2d/libs/Triangle/triangle.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"D237DC54-6254-4518-973F-8F602474B663": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2ContactManager.cpp",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Dynamics/b2ContactManager.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"D32FE517-B1C8-4768-8EEC-058881E7AE60": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2DynamicTree.cpp",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Collision/b2DynamicTree.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"D412DB99-076E-416D-A0E1-F342D1590ADF": {
+			"fileRef": "52767DE2-1E60-4017-9E67-0264AC509E64",
+			"isa": "PBXBuildFile"
+		},
+		"D41E7D93-C3B8-4E46-A84A-12941D1B072C": {
+			"children": [
+				"9BA6F5B1-C339-4745-828C-154A439C9FDB"
+			],
+			"isa": "PBXGroup",
+			"name": "Utilities",
+			"path": "../../../addons/ofxBox2d/libs/liquidfun/Contributions/Utilities",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"D45BD882-725E-4C67-9C7A-4C3E4701A162": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofxBox2dRender.cpp",
+			"path": "../../../addons/ofxBox2d/src/ofxBox2dRender.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"D8592EDD-369B-44A3-AA5E-3F8C249198AC": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2Body.h",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Dynamics/b2Body.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"D89546BD-8187-4D0D-99F3-1848427940C0": {
+			"children": [
+				"D1987E31-251B-48E8-8661-DF6766594DCD",
+				"97619A2A-6442-474A-867B-27CAAD57BCAE"
+			],
+			"isa": "PBXGroup",
+			"name": "Triangle",
+			"path": "../../../addons/ofxBox2d/libs/Triangle",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"DA1C59E6-5FE7-4634-A737-352AE3672C2F": {
+			"fileRef": "F1E76C89-4E8D-48F2-96B7-C41F8F4EBD76",
+			"isa": "PBXBuildFile"
+		},
+		"DC0D4BA9-51B6-4155-9C3A-2875AF1799F5": {
+			"fileRef": "A832D18A-4C50-403D-AC1C-B20290A97299",
+			"isa": "PBXBuildFile"
+		},
+		"DF4D3AA7-ADF7-452E-8DBD-442BB453C7EC": {
+			"children": [
+				"8E4CE352-27AE-4EAF-975A-05E00616C989",
+				"F1E76C89-4E8D-48F2-96B7-C41F8F4EBD76",
+				"4681BD79-0619-4FCF-B191-82295C878B05",
+				"BDA6753D-AB5E-4E09-BDB8-18CB2F81E416",
+				"E3DF5BAE-4686-4C5A-9502-81CEC9059921",
+				"E5AA6618-D28B-440B-BC34-BF20559093CA",
+				"91797E4D-DD7C-4C06-9F5A-623B74B631D0",
+				"13A20292-D0A0-4A58-8103-792CA457E3A9",
+				"81479BDD-9586-45CF-9036-56C4CE124133",
+				"EF78BB83-D049-4408-B597-95CFEEB9DF21",
+				"D32FE517-B1C8-4768-8EEC-058881E7AE60",
+				"37EEEF30-46D3-475A-ADBF-D1E17097E221",
+				"B8B3490E-10D9-4159-8214-F6E3A5468F23",
+				"737300CE-D157-46E6-ADDC-96218B4090BB"
+			],
+			"isa": "PBXGroup",
+			"name": "Collision",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Collision",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"E39EED15-BD80-4474-A28C-77400D21A23D": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2ParticleGroup.h",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Particle/b2ParticleGroup.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"E3DF5BAE-4686-4C5A-9502-81CEC9059921": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2CollideEdge.cpp",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Collision/b2CollideEdge.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"E42962A92163ECCD00A6A9E2": {
+			"alwaysOutOfDate": "1",
+			"buildActionMask": "2147483647",
+			"files": [],
+			"inputPaths": [],
+			"isa": "PBXShellScriptBuildPhase",
+			"name": "Run Script — Compile OF",
+			"outputPaths": [],
+			"runOnlyForDeploymentPostprocessing": "0",
+			"shellPath": "/bin/sh",
+			"shellScript": "echo \"💾 Compiling Openframeworks\"\nxcodebuild -project \"$OF_PATH/libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj\" -target openFrameworks -configuration \"${CONFIGURATION}\"  CLANG_CXX_LANGUAGE_STANDARD=$CLANG_CXX_LANGUAGE_STANDARD MACOSX_DEPLOYMENT_TARGET=$MACOSX_DEPLOYMENT_TARGET GCC_PREPROCESSOR_DEFINITIONS=$USER_PREPROCESSOR_DEFINITIONS\n",
+			"showEnvVarsInLog": "0"
+		},
+		"E4A5B60F29BAAAE400C2D356": {
+			"buildActionMask": "2147483647",
+			"dstPath": "",
+			"dstSubfolderSpec": "6",
+			"files": [],
+			"isa": "PBXCopyFilesBuildPhase",
+			"runOnlyForDeploymentPostprocessing": "0"
+		},
+		"E4B69B4A0A3A1720003C02F2": {
+			"children": [
+				"191CD6FA2847E21E0085CBB6",
+				"E4B6FCAD0C3E899E008CF71C",
+				"E4EB6923138AFD0F00A09F29",
+				"E4B69E1C0A3A1BDC003C02F2",
+				"191EF70929D778A400F35F26",
+				"BB4B014C10F69532006C3DED",
+				"E4B69B5B0A3A1756003C02F2"
+			],
+			"isa": "PBXGroup",
+			"sourceTree": "<group>"
+		},
+		"E4B69B4C0A3A1720003C02F2": {
+			"attributes": {
+				"LastUpgradeCheck": "0600"
+			},
+			"buildConfigurationList": "E4B69B4D0A3A1720003C02F2",
+			"compatibilityVersion": "Xcode 3.2",
+			"developmentRegion": "en",
+			"hasScannedForEncodings": "0",
+			"isa": "PBXProject",
+			"knownRegions": [
+				"en",
+				"Base"
+			],
+			"mainGroup": "E4B69B4A0A3A1720003C02F2",
+			"productRefGroup": "E4B69B4A0A3A1720003C02F2",
+			"projectDirPath": "",
+			"projectRoot": "",
+			"targets": [
+				"E4B69B5A0A3A1756003C02F2"
+			]
+		},
+		"E4B69B4D0A3A1720003C02F2": {
+			"buildConfigurations": [
+				"E4B69B4E0A3A1720003C02F2",
+				"E4B69B4F0A3A1720003C02F2"
+			],
+			"defaultConfigurationIsVisible": "0",
+			"defaultConfigurationName": "Release",
+			"isa": "XCConfigurationList"
+		},
+		"E4B69B4E0A3A1720003C02F2": {
+			"baseConfigurationReference": "E4EB6923138AFD0F00A09F29",
+			"buildSettings": {
+				"CODE_SIGN_ENTITLEMENTS": "of.entitlements",
+				"COPY_PHASE_STRIP": "NO",
+				"ENABLE_TESTABILITY": "YES",
+				"GCC_OPTIMIZATION_LEVEL": "0",
+				"GCC_WARN_UNUSED_VARIABLE": "NO",
+				"HEADER_SEARCH_PATHS": [
+					"$(OF_CORE_HEADERS)",
+					"src"
+				],
+				"OTHER_CPLUSPLUSFLAGS": "-D__MACOSX_CORE__"
+			},
+			"isa": "XCBuildConfiguration",
+			"name": "Debug"
+		},
+		"E4B69B4F0A3A1720003C02F2": {
+			"baseConfigurationReference": "E4EB6923138AFD0F00A09F29",
+			"buildSettings": {
+				"CODE_SIGN_ENTITLEMENTS": "of.entitlements",
+				"COPY_PHASE_STRIP": "YES",
+				"GCC_OPTIMIZATION_LEVEL": "3",
+				"GCC_UNROLL_LOOPS": "YES",
+				"HEADER_SEARCH_PATHS": [
+					"$(OF_CORE_HEADERS)",
+					"src"
+				],
+				"OTHER_CPLUSPLUSFLAGS": "-D__MACOSX_CORE__"
+			},
+			"isa": "XCBuildConfiguration",
+			"name": "Release"
+		},
+		"E4B69B580A3A1756003C02F2": {
+			"buildActionMask": "2147483647",
+			"files": [
+				"E4B69E200A3A1BDC003C02F2",
+				"E4B69E210A3A1BDC003C02F2",
+				"09C47EFE-3737-41AF-8484-3D588DF12B88",
+				"781BA4D3-969D-4AF7-8351-67F7B903B991",
+				"23624E0D-1D26-423B-8D77-753FDD343628",
+				"D412DB99-076E-416D-A0E1-F342D1590ADF",
+				"DA1C59E6-5FE7-4634-A737-352AE3672C2F",
+				"41981116-BE05-4E77-AAF7-DAB5030C9134",
+				"428567F0-0DB2-40AD-BF8F-D0518ED82FAE",
+				"A94A7B20-940E-4B36-955E-067428026FD8",
+				"3456AAE2-D2FA-4CAA-BED7-850A365C90BC",
+				"483D3BEC-594E-4257-AF63-1238620CAF56",
+				"91DC5D92-9D42-4A8F-8794-C2BCBF8EB4D6",
+				"107121EB-85BB-4900-AA86-FE8F380B7EF1",
+				"18DB0074-00CB-4EA7-8935-6FACC1294316",
+				"4E613C5E-1917-43DF-81AB-2C1608BA3D9B",
+				"86F28B54-F755-464B-BFB4-065F0A9A61C0",
+				"C05F1EAB-8A29-4691-9373-0717498680BF",
+				"9D4DCD6B-38BC-4E4A-A63C-B646CFA6371A",
+				"15918131-21BD-4AEB-8DEF-EBD23A681BAB",
+				"FBE2697A-D7BB-4CD4-B11A-32EE22B1670E",
+				"24DB4A71-762B-4BA6-93E3-C04BA45E93B5",
+				"E6228346-2D3D-44DD-9B3A-5F5C0705CF16",
+				"493A9DC3-8426-44BB-9A11-848615D9327D",
+				"C19209CE-21A5-4408-BE6E-F3639273F98E",
+				"80F73804-C791-4F54-8B5B-96A2EEB243F8",
+				"22AD248E-35C2-441D-B276-9BD17DCA82A8",
+				"7D406CAE-B8C8-4E49-A5CB-7AD0CC971700",
+				"1E65C39E-5D0E-487F-846E-1A873D6122CB",
+				"8D3CE84F-BB68-4F9E-B93C-CD6CCCB691A9",
+				"A8442524-2466-4974-B3EA-6FD3D059EBBC",
+				"29EBDAF9-1E46-419A-9B66-07604F72F1CB",
+				"E8EBC0BE-9745-4B38-9B52-4FC7856F8067",
+				"CA83A4FE-EAA8-4EB9-8F03-480DD5E9BA70",
+				"6A234259-0A45-4C1D-A6E8-5744A0140D78",
+				"BD005DE0-8BE5-44A3-B1E2-1CA5F9559B89",
+				"CAF0F8B4-B9F9-4584-9026-8709B3598B80",
+				"B24F926C-D064-428F-8CA1-6511D1B2CB3F",
+				"66EF14DA-DCEE-4514-954A-B749A21480A8",
+				"44A2EA19-BD8D-4B00-8A28-82F71C4698E0",
+				"EBDC8EF6-7C9C-4DE9-9FB3-359C4D766A71",
+				"4430F5B8-8D14-465E-A200-AF88D7A4A2E9",
+				"0A7206F4-85D6-419B-81BC-F52DB7B71A2F",
+				"19A3A705-5EAB-4AC6-AB4B-381623C9833B",
+				"CEDDFD7C-5154-4893-8DBE-643238127A81",
+				"17E4A73A-9182-4AC1-B6A4-6A2A493ECFEF",
+				"39BDD6CB-7402-40BD-BFA7-70DC60494E69",
+				"2E6D4B22-FD01-4AF4-BB6C-E45934ABDF0F",
+				"CCE4621D-A12E-4F3B-8C50-45EEDF5E6DB6",
+				"7327831A-4937-41F1-907F-4EE3B5094DFD",
+				"A882C743-6722-4A88-B26D-441B6F4C0E17",
+				"61BBA3B6-5AE3-4728-8FCD-E02E4516BDC7",
+				"7C1E5AFE-ED4E-4540-8C19-CF29B0C33026",
+				"1068F58F-29C1-429F-B573-FDF4C41F2D26",
+				"5819128A-A8EB-4B36-A9E5-3D442062203C",
+				"C2E7C3B3-3175-44D8-A3CB-14AB5FADC6F9",
+				"A4D884A3-5980-4DAE-BF76-6764284334E8",
+				"BEF92694-1343-4E24-9444-5B2A9E749454",
+				"0EEFC0E4-DD6F-4C5F-B902-97C1337A8D0E",
+				"B3246BDE-5A23-47E2-B64B-E02503C2D333",
+				"3ABED305-A3B2-4D6B-BBF7-EC211CC242D0",
+				"DC0D4BA9-51B6-4155-9C3A-2875AF1799F5",
+				"B8D0E43C-16E5-4EC6-815A-80099704D90C",
+				"944CC7E2-F066-4A6C-BC95-F53F5A3D1341",
+				"489CAB94-7E48-484A-ACEB-04F2A0D39AB9",
+				"A6A55033-4B6D-4DB3-A255-8DAA0859D07F",
+				"198B69A3-AB27-4B5C-9A69-306DF1D2BA22",
+				"FDA20D12-5FA0-4B32-BD25-12F390DAE0A7",
+				"EF640097-8941-4B6F-A17A-058D23719AA8",
+				"7904CCBB-BA62-491E-918C-633259EC6015",
+				"B47EF6F5-90D8-4833-BA5C-E5B3A36132CB"
+			],
+			"isa": "PBXSourcesBuildPhase",
+			"runOnlyForDeploymentPostprocessing": "0"
+		},
+		"E4B69B590A3A1756003C02F2": {
+			"buildActionMask": "2147483647",
+			"files": [],
+			"isa": "PBXFrameworksBuildPhase",
+			"runOnlyForDeploymentPostprocessing": "0"
+		},
+		"E4B69B5A0A3A1756003C02F2": {
+			"buildConfigurationList": "E4B69B5F0A3A1757003C02F2",
+			"buildPhases": [
+				"E42962A92163ECCD00A6A9E2",
+				"E4B69B580A3A1756003C02F2",
+				"E4B69B590A3A1756003C02F2",
+				"E4C2427710CC5ABF004149E2",
+				"E4A5B60F29BAAAE400C2D356",
+				"19B789C429E5AB4A0082E9B8"
+			],
+			"buildRules": [],
+			"dependencies": [],
+			"isa": "PBXNativeTarget",
+			"name": "20250526-v2",
+			"productName": "myOFApp",
+			"productReference": "E4B69B5B0A3A1756003C02F2",
+			"productType": "com.apple.product-type.application"
+		},
+		"E4B69B5B0A3A1756003C02F2": {
+			"explicitFileType": "wrapper.application",
+			"includeInIndex": "0",
+			"isa": "PBXFileReference",
+			"path": "20250526-v2Debug.app",
+			"sourceTree": "BUILT_PRODUCTS_DIR"
+		},
+		"E4B69B5F0A3A1757003C02F2": {
+			"buildConfigurations": [
+				"E4B69B600A3A1757003C02F2",
+				"E4B69B610A3A1757003C02F2"
+			],
+			"defaultConfigurationIsVisible": "0",
+			"defaultConfigurationName": "Release",
+			"isa": "XCConfigurationList"
+		},
+		"E4B69B600A3A1757003C02F2": {
+			"baseConfigurationReference": "E4EB6923138AFD0F00A09F29",
+			"buildSettings": {
+				"ARCHS": "$(ARCHS_STANDARD)",
+				"COPY_PHASE_STRIP": "NO",
+				"FRAMEWORK_SEARCH_PATHS": "$(inherited)",
+				"GCC_DYNAMIC_NO_PIC": "NO",
+				"HEADER_SEARCH_PATHS": [
+					"$(OF_CORE_HEADERS)",
+					"src",
+					"src",
+					"../../../addons/ofxBox2d/libs",
+					"../../../addons/ofxBox2d/libs/Box2D",
+					"../../../addons/ofxBox2d/libs/Box2D/Collision",
+					"../../../addons/ofxBox2d/libs/Box2D/Collision/Shapes",
+					"../../../addons/ofxBox2d/libs/Box2D/Common",
+					"../../../addons/ofxBox2d/libs/Box2D/Dynamics",
+					"../../../addons/ofxBox2d/libs/Box2D/Dynamics/Contacts",
+					"../../../addons/ofxBox2d/libs/Box2D/Dynamics/Joints",
+					"../../../addons/ofxBox2d/libs/Box2D/Particle",
+					"../../../addons/ofxBox2d/libs/Box2D/Rope",
+					"../../../addons/ofxBox2d/libs/Triangle",
+					"../../../addons/ofxBox2d/libs/liquidfun",
+					"../../../addons/ofxBox2d/libs/liquidfun/Contributions",
+					"../../../addons/ofxBox2d/libs/liquidfun/Contributions/Enhancements",
+					"../../../addons/ofxBox2d/libs/liquidfun/Contributions/Enhancements/FixedPoint",
+					"../../../addons/ofxBox2d/libs/liquidfun/Contributions/Utilities",
+					"../../../addons/ofxBox2d/libs/liquidfun/Contributions/Utilities/ConvexDecomposition",
+					"../../../addons/ofxBox2d/src"
+				],
+				"LIBRARY_SEARCH_PATHS": "$(inherited)",
+				"OTHER_LDFLAGS": [
+					"$(OF_CORE_LIBS)",
+					"$(OF_CORE_FRAMEWORKS)",
+					"$(LIB_OF_DEBUG)"
+				]
+			},
+			"isa": "XCBuildConfiguration",
+			"name": "Debug"
+		},
+		"E4B69B610A3A1757003C02F2": {
+			"baseConfigurationReference": "E4EB6923138AFD0F00A09F29",
+			"buildSettings": {
+				"ARCHS": "$(ARCHS_STANDARD)",
+				"COPY_PHASE_STRIP": "YES",
+				"FRAMEWORK_SEARCH_PATHS": "$(inherited)",
+				"HEADER_SEARCH_PATHS": [
+					"$(OF_CORE_HEADERS)",
+					"src",
+					"src",
+					"../../../addons/ofxBox2d/libs",
+					"../../../addons/ofxBox2d/libs/Box2D",
+					"../../../addons/ofxBox2d/libs/Box2D/Collision",
+					"../../../addons/ofxBox2d/libs/Box2D/Collision/Shapes",
+					"../../../addons/ofxBox2d/libs/Box2D/Common",
+					"../../../addons/ofxBox2d/libs/Box2D/Dynamics",
+					"../../../addons/ofxBox2d/libs/Box2D/Dynamics/Contacts",
+					"../../../addons/ofxBox2d/libs/Box2D/Dynamics/Joints",
+					"../../../addons/ofxBox2d/libs/Box2D/Particle",
+					"../../../addons/ofxBox2d/libs/Box2D/Rope",
+					"../../../addons/ofxBox2d/libs/Triangle",
+					"../../../addons/ofxBox2d/libs/liquidfun",
+					"../../../addons/ofxBox2d/libs/liquidfun/Contributions",
+					"../../../addons/ofxBox2d/libs/liquidfun/Contributions/Enhancements",
+					"../../../addons/ofxBox2d/libs/liquidfun/Contributions/Enhancements/FixedPoint",
+					"../../../addons/ofxBox2d/libs/liquidfun/Contributions/Utilities",
+					"../../../addons/ofxBox2d/libs/liquidfun/Contributions/Utilities/ConvexDecomposition",
+					"../../../addons/ofxBox2d/src"
+				],
+				"LIBRARY_SEARCH_PATHS": "$(inherited)",
+				"OTHER_LDFLAGS": [
+					"$(OF_CORE_LIBS)",
+					"$(OF_CORE_FRAMEWORKS)",
+					"$(LIB_OF)"
+				],
+				"baseConfigurationReference": "E4EB6923138AFD0F00A09F29"
+			},
+			"isa": "XCBuildConfiguration",
+			"name": "Release"
+		},
+		"E4B69E1C0A3A1BDC003C02F2": {
+			"children": [
+				"E4B69E1D0A3A1BDC003C02F2",
+				"E4B69E1E0A3A1BDC003C02F2",
+				"E4B69E1F0A3A1BDC003C02F2"
+			],
+			"isa": "PBXGroup",
+			"path": "src",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"E4B69E1D0A3A1BDC003C02F2": {
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"lastKnownFileType": "sourcecode.cpp.cpp",
+			"name": "main.cpp",
+			"path": "src/main.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"E4B69E1E0A3A1BDC003C02F2": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofApp.cpp",
+			"path": "src/ofApp.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"E4B69E1F0A3A1BDC003C02F2": {
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"lastKnownFileType": "sourcecode.c.h",
+			"name": "ofApp.h",
+			"path": "src/ofApp.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"E4B69E200A3A1BDC003C02F2": {
+			"fileRef": "E4B69E1D0A3A1BDC003C02F2",
+			"isa": "PBXBuildFile"
+		},
+		"E4B69E210A3A1BDC003C02F2": {
+			"fileRef": "E4B69E1E0A3A1BDC003C02F2",
+			"isa": "PBXBuildFile"
+		},
+		"E4B6FCAD0C3E899E008CF71C": {
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"lastKnownFileType": "text.plist.xml",
+			"path": "openFrameworks-Info.plist",
+			"sourceTree": "<group>"
+		},
+		"E4C2427710CC5ABF004149E2": {
+			"buildActionMask": "2147483647",
+			"dstPath": "",
+			"dstSubfolderSpec": "10",
+			"files": [],
+			"isa": "PBXCopyFilesBuildPhase",
+			"runOnlyForDeploymentPostprocessing": "0"
+		},
+		"E4EB6923138AFD0F00A09F29": {
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"lastKnownFileType": "text.xcconfig",
+			"path": "Project.xcconfig",
+			"sourceTree": "<group>"
+		},
+		"E5AA6618-D28B-440B-BC34-BF20559093CA": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2CollidePolygon.cpp",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Collision/b2CollidePolygon.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"E6228346-2D3D-44DD-9B3A-5F5C0705CF16": {
+			"fileRef": "860F4FA6-8EE5-4EFE-8DF9-E2A689E70469",
+			"isa": "PBXBuildFile"
+		},
+		"E8EBC0BE-9745-4B38-9B52-4FC7856F8067": {
+			"fileRef": "1830B7F2-8F64-4082-99BC-6C65399A7D64",
+			"isa": "PBXBuildFile"
+		},
+		"EB572167-EC42-494E-B16E-762E06096F61": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2Stat.h",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Common/b2Stat.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"EBBF18FB-8D73-4EF5-A3B4-2B7A00412BA5": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2Timer.cpp",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Common/b2Timer.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"EBDC8EF6-7C9C-4DE9-9FB3-359C4D766A71": {
+			"fileRef": "6C2EBDE5-BE27-435D-8C00-948CFCB7364A",
+			"isa": "PBXBuildFile"
+		},
+		"ED447703-4830-4678-B507-A38AB2847AD2": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2EdgeShape.cpp",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Collision/Shapes/b2EdgeShape.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"EF640097-8941-4B6F-A17A-058D23719AA8": {
+			"fileRef": "4D65E87A-CD62-45C0-8C49-A2AFD810EAEC",
+			"isa": "PBXBuildFile"
+		},
+		"EF78BB83-D049-4408-B597-95CFEEB9DF21": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2Distance.h",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Collision/b2Distance.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"F1E76C89-4E8D-48F2-96B7-C41F8F4EBD76": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2BroadPhase.cpp",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Collision/b2BroadPhase.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"F5373967-6E71-4916-809C-16FC64E57BD4": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2Joint.cpp",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Dynamics/Joints/b2Joint.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"F599A239-5729-4ED2-B85C-B6827B80D50E": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2SlabAllocator.h",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Common/b2SlabAllocator.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"F6AD2BE6-6EB8-4442-96D7-1013664B424B": {
+			"children": [
+				"9AC0A233-4FFD-4A03-B3BF-17E4198D9430",
+				"C15937D3-91FA-41AC-9B0C-37AC8B12B67D",
+				"383A5BE6-D53B-4458-8262-443BC6EFF982",
+				"0602597F-8205-41FB-A975-165AEFBA6F2F",
+				"08175B98-17B0-402A-94BA-F78ED64A8356",
+				"2F086E0F-E640-4F73-BDD1-80A72C129D32",
+				"1CFB11E7-D0FF-43E2-BBFC-BEE6E6E55567",
+				"8472D3BC-1DB7-4810-B948-2C3DFA4D9C3F",
+				"5067CFA2-08F1-4627-A07E-182129C95DE7",
+				"8120C8E6-B88A-434B-ABD2-EA7EA80C0BD9",
+				"76BB8998-A6ED-44AA-8564-03DC5656DD78",
+				"979F7F6F-377E-4BF8-B032-39D83ACB155F",
+				"C261095B-F913-45A7-BCBB-60800C7EEAD1",
+				"F6C5966E-C8C8-4C51-A572-511B8E5EFA60",
+				"FEBD5F7D-7E14-4EFA-BE04-ED39B03532D0",
+				"D03D1E5E-0AE7-47C4-B3FA-D6F860834732",
+				"B34E0CA5-F461-48AD-8061-9C68CD02FC6E",
+				"82496CEE-AC94-4E18-A312-AC632CDE7D45"
+			],
+			"isa": "PBXGroup",
+			"name": "Contacts",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Dynamics/Contacts",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"F6C5966E-C8C8-4C51-A572-511B8E5EFA60": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2EdgeAndPolygonContact.h",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Dynamics/Contacts/b2EdgeAndPolygonContact.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"FBBF3BC8-0F82-49C8-8A71-41F627715F3B": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2Island.h",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Dynamics/b2Island.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"FBE2697A-D7BB-4CD4-B11A-32EE22B1670E": {
+			"fileRef": "9A52B8D1-34AB-4C42-B410-BD614364228E",
+			"isa": "PBXBuildFile"
+		},
+		"FDA20D12-5FA0-4B32-BD25-12F390DAE0A7": {
+			"fileRef": "255C80AF-1D39-4BDE-8A55-30191850D7DF",
+			"isa": "PBXBuildFile"
+		},
+		"FEBD5F7D-7E14-4EFA-BE04-ED39B03532D0": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "b2PolygonAndCircleContact.cpp",
+			"path": "../../../addons/ofxBox2d/libs/Box2D/Dynamics/Contacts/b2PolygonAndCircleContact.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		}
+	},
+	"openFrameworksProjectGeneratorVersion": "21",
+	"rootObject": "E4B69B4C0A3A1720003C02F2"
+}
