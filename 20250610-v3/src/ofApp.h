@@ -6,7 +6,9 @@ public:
     void setup();
     void update();
     void draw();
-    void drawFlowerOfLife(float cx, float cy, int layers, float baseRadius);
 
+    ofTrueTypeFont font;
+    string message;
     float time;
+    ofEasyCam cam;
 };
