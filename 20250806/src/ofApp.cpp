@@ -17,6 +17,19 @@ void ofApp::setup(){
     geometryRadius = 200;
     currentPattern = 0;
     
+    hexColorPalette = {
+        hexToColor("#46A9D0"),
+        hexToColor("#0083BB"),
+        hexToColor("#13529F"),
+        hexToColor("#021F72"),
+        hexToColor("#00214B"),
+        hexToColor("#002427"),
+        hexToColor("#03604A"),
+        hexToColor("#017777"),
+        hexToColor("#009BAA"),
+        hexToColor("#73CBD4")
+    };
+    
     attractors.resize(numAttractors);
     for(int i = 0; i < numAttractors; i++) {
         float angle = (TWO_PI / numAttractors) * i;
@@ -30,6 +43,16 @@ void ofApp::setup(){
     
     particles.clear();
     particles.reserve(maxParticles);
+}
+
+//--------------------------------------------------------------
+ofColor ofApp::hexToColor(string hex) {
+    if(hex[0] == '#') hex = hex.substr(1);
+    
+    unsigned int r, g, b;
+    sscanf(hex.c_str(), "%02x%02x%02x", &r, &g, &b);
+    
+    return ofColor(r, g, b);
 }
 
 //--------------------------------------------------------------
@@ -236,22 +259,20 @@ void ofApp::update(){
         p.rotation = ofRandom(TWO_PI);
         p.rotationSpeed = ofRandom(-0.1, 0.1);
         
-        // Ultra-enhanced color palette with smooth transitions
-        float hue1 = fmod(160 + colorShift + ofNoise(time * 0.06) * 120, 360); // Blue-purple range
-        float hue2 = fmod(300 + colorShift + ofNoise(time * 0.09 + 100) * 100, 360); // Purple-pink range  
-        float hue3 = fmod(40 + colorShift + ofNoise(time * 0.04 + 200) * 80, 360); // Orange-yellow range
-        float hue4 = fmod(120 + colorShift + ofNoise(time * 0.07 + 300) * 60, 360); // Green-cyan range
+        // Use hex color palette with dynamic selection
+        float colorSelector = ofNoise(p.pos.x * 0.003, p.pos.y * 0.003, time * 0.05);
+        int colorIndex1 = (int)(colorSelector * hexColorPalette.size()) % hexColorPalette.size();
+        int colorIndex2 = (colorIndex1 + 1) % hexColorPalette.size();
         
-        float hueSelector = ofNoise(p.pos.x * 0.002, p.pos.y * 0.002, time * 0.08);
-        float finalHue;
-        if(hueSelector < 0.25) finalHue = hue1;
-        else if(hueSelector < 0.5) finalHue = hue2;
-        else if(hueSelector < 0.75) finalHue = hue3;
-        else finalHue = hue4;
+        // Blend between adjacent colors in palette
+        float blendAmount = fmod(colorSelector * hexColorPalette.size(), 1.0);
+        ofColor color1 = hexColorPalette[colorIndex1];
+        ofColor color2 = hexColorPalette[colorIndex2];
         
-        float saturation = ofRandom(180, 255);
-        float brightness = ofRandom(220, 255);
-        p.color.setHsb(finalHue, saturation, brightness, 200);
+        p.color.r = color1.r * (1.0 - blendAmount) + color2.r * blendAmount;
+        p.color.g = color1.g * (1.0 - blendAmount) + color2.g * blendAmount;
+        p.color.b = color1.b * (1.0 - blendAmount) + color2.b * blendAmount;
+        p.color.a = 200;
         
         particles.push_back(p);
     }
@@ -279,9 +300,11 @@ void ofApp::draw(){
         ofDrawRectangle(offsetX, offsetY, ofGetWidth(), ofGetHeight());
     }
     
-    // Draw morphing geometry pattern
+    // Draw morphing geometry pattern using hex palette
     ofEnableBlendMode(OF_BLENDMODE_ADD);
-    ofSetColor(80, 40, 120, 60);
+    int geometryColorIndex = (int)(time * 0.3) % hexColorPalette.size();
+    ofColor geoColor = hexColorPalette[geometryColorIndex];
+    ofSetColor(geoColor.r, geoColor.g, geoColor.b, 60);
     for(int i = 0; i < geometryPoints.size(); i++) {
         ofVec2f current = geometryPoints[i];
         ofVec2f next = geometryPoints[(i + 1) % geometryPoints.size()];
@@ -290,7 +313,9 @@ void ofApp::draw(){
         ofDrawLine(current, next);
         
         float geometryPulse = sin(time * 4 + i) * 0.4 + 0.6;
-        ofSetColor(120, 80, 180, 40 * geometryPulse);
+        int pulseColorIndex = (geometryColorIndex + i) % hexColorPalette.size();
+        ofColor pulseColor = hexColorPalette[pulseColorIndex];
+        ofSetColor(pulseColor.r, pulseColor.g, pulseColor.b, 40 * geometryPulse);
         ofDrawCircle(current, 15 * geometryPulse);
     }
     
@@ -298,14 +323,21 @@ void ofApp::draw(){
     for(int i = 0; i < numAttractors; i++) {
         float pulse = sin(time * 1.8 + i * 0.8) * 0.4 + 0.6;
         
-        // Attractor cores with multiple layers
-        ofSetColor(140, 80, 200, 60 * pulse);
+        // Attractor cores with multiple layers using hex palette
+        int attractorColorIndex = (i * 2) % hexColorPalette.size();
+        ofColor attractorColor = hexColorPalette[attractorColorIndex];
+        
+        ofSetColor(attractorColor.r, attractorColor.g, attractorColor.b, 60 * pulse);
         ofDrawCircle(attractors[i], 25 * pulse);
         
-        ofSetColor(100, 150, 250, 35 * pulse);
+        int attractorColor2Index = (attractorColorIndex + 1) % hexColorPalette.size();
+        ofColor attractorColor2 = hexColorPalette[attractorColor2Index];
+        ofSetColor(attractorColor2.r, attractorColor2.g, attractorColor2.b, 35 * pulse);
         ofDrawCircle(attractors[i], 50 * pulse);
         
-        ofSetColor(80, 120, 180, 15 * pulse);
+        int attractorColor3Index = (attractorColorIndex + 2) % hexColorPalette.size();
+        ofColor attractorColor3 = hexColorPalette[attractorColor3Index];
+        ofSetColor(attractorColor3.r, attractorColor3.g, attractorColor3.b, 15 * pulse);
         ofDrawCircle(attractors[i], 90 * pulse);
         
         // Draw connections between attractors
@@ -313,7 +345,9 @@ void ofApp::draw(){
             float distance = attractors[i].distance(attractors[j]);
             if(distance < 400) {
                 float connectionAlpha = ofMap(distance, 0, 400, 40, 5);
-                ofSetColor(60, 100, 140, connectionAlpha * pulse);
+                int connectionColorIndex = (i + j) % hexColorPalette.size();
+                ofColor connectionColor = hexColorPalette[connectionColorIndex];
+                ofSetColor(connectionColor.r, connectionColor.g, connectionColor.b, connectionAlpha * pulse);
                 ofSetLineWidth(1);
                 ofDrawLine(attractors[i], attractors[j]);
             }
@@ -427,18 +461,18 @@ void ofApp::draw(){
     ofDisableBlendMode();
     
     // Ultra-enhanced UI with pattern info
-    ofEnableBlendMode(OF_BLENDMODE_ALPHA);
-    ofSetColor(0, 0, 0, 120);
-    ofDrawRectangle(10, 10, 360, 90);
+    // ofEnableBlendMode(OF_BLENDMODE_ALPHA);
+    // ofSetColor(0, 0, 0, 120);
+    // ofDrawRectangle(10, 10, 360, 90);
     
-    ofSetColor(255, 230);
-    string patternNames[] = {"Star", "Flower", "Spiral", "Wave"};
-    string info = "FPS: " + ofToString(ofGetFrameRate(), 1) + 
-                  "   Particles: " + ofToString(particles.size()) +
-                  "\nPattern: " + patternNames[currentPattern] +
-                  "   Time: " + ofToString((int)(time / 15) + 1) + "/∞" +
-                  "\nPress 't' trails   'r' reset   's' save";
-    ofDrawBitmapString(info, 20, 30);
+    // ofSetColor(255, 230);
+    // string patternNames[] = {"Star", "Flower", "Spiral", "Wave"};
+    // string info = "FPS: " + ofToString(ofGetFrameRate(), 1) + 
+    //               "   Particles: " + ofToString(particles.size()) +
+    //               "\nPattern: " + patternNames[currentPattern] +
+    //               "   Time: " + ofToString((int)(time / 15) + 1) + "/∞" +
+    //               "\nPress 't' trails   'r' reset   's' save";
+    // ofDrawBitmapString(info, 20, 30);
 }
 
 //--------------------------------------------------------------

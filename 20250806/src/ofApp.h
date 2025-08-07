@@ -50,4 +50,7 @@ class ofApp : public ofBaseApp{
 		vector<ofVec2f> geometryPoints;
 		float geometryRadius;
 		int currentPattern;
+		
+		vector<ofColor> hexColorPalette;
+		ofColor hexToColor(string hex);
 };
