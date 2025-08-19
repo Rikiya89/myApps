@@ -42,6 +42,12 @@ class ofApp : public ofBaseApp{
 		float cameraRotationSpeed;
 		bool autoRotateCamera;
 		
+		bool useAdditiveBlend;
+		vector<ofVec3f> starField;
+		int numStars;
+		float globalRotateSpeed;
+		float fogNear, fogFar;
+		
 		void initializePalette();
 		void createParticles();
 		void updateParticles();
@@ -50,4 +56,7 @@ class ofApp : public ofBaseApp{
 		void drawStar(float size, float rotation);
 		void drawDiamond(float size, float rotation, ofVec3f axis);
 		ofColor getColorFromPalette(float t);
+		void initStarField();
+		void drawStarField();
+		float fogAlpha(const ofVec3f& p) const;
 };
