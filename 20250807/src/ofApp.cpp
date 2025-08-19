@@ -5,6 +5,9 @@ void ofApp::setup(){
     ofSetFrameRate(60);
     ofSetVerticalSync(true);
     ofEnableDepthTest();
+    // Enforce window size at runtime (some macOS setups ignore initial GLFW size)
+    ofSetWindowShape(720, 1080);
+    ofSetWindowPosition(60, 40);
     
     time = 0;
     numParticles = 800;
