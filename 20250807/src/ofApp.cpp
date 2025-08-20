@@ -5,31 +5,48 @@ void ofApp::setup(){
     ofSetFrameRate(60);
     ofSetVerticalSync(true);
     ofEnableDepthTest();
+    ofEnableAlphaBlending();
     // Enforce window size at runtime (some macOS setups ignore initial GLFW size)
     ofSetWindowShape(720, 1080);
     ofSetWindowPosition(60, 40);
     
     time = 0;
-    numParticles = 800;
-    cameraRotationSpeed = 0.2;
+    numParticles = 600;
+    noiseScale = 0.008;
+    cameraRotationSpeed = 0.3;
     autoRotateCamera = true;
+    showFlowField = false;
+    showConnections = true;
     
-    initializePalette();
+    // Initialize waves for interference patterns
+    waves.clear();
+    for(int i = 0; i < 5; i++) {
+        Wave wave;
+        wave.frequency = ofRandom(0.5, 2.0);
+        wave.amplitude = ofRandom(20, 60);
+        wave.phase = ofRandom(0, TWO_PI);
+        wave.direction = ofVec3f(ofRandom(-1, 1), ofRandom(-1, 1), ofRandom(-1, 1)).normalize();
+        waves.push_back(wave);
+    }
+    
+    createFlowField();
     createParticles();
     
-    cam.setDistance(500);
-    cam.setFov(70);
+    cam.setDistance(600);
+    cam.setFov(60);
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
     time += ofGetLastFrameTime();
+    updateFlowField();
     updateParticles();
 }
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-    ofBackgroundGradient(ofColor::fromHex(0x0F0F23), ofColor::fromHex(0x1A1A2E));
+    // Black background for monochrome theme
+    ofBackground(0);
     
     if(autoRotateCamera) {
         float camX = cos(time * cameraRotationSpeed) * cam.getDistance();
@@ -40,6 +57,23 @@ void ofApp::draw(){
     
     cam.begin();
     
+    // Draw wave interference patterns
+    drawWaveInterference();
+    
+    // Draw geometric patterns
+    drawGeometricPatterns();
+    
+    // Draw flow field if enabled
+    if(showFlowField) {
+        drawFlowField();
+    }
+    
+    // Draw particle connections
+    if(showConnections) {
+        drawConnections();
+    }
+    
+    // Draw particles
     drawParticles();
     
     cam.end();
@@ -57,6 +91,25 @@ void ofApp::keyPressed(int key){
     }
     if(key == 'r' || key == 'R') {
         createParticles();
+        createFlowField();
+    }
+    if(key == 'f' || key == 'F') {
+        showFlowField = !showFlowField;
+    }
+    if(key == 'c' || key == 'C') {
+        showConnections = !showConnections;
+    }
+    if(key == 'w' || key == 'W') {
+        // Regenerate waves
+        waves.clear();
+        for(int i = 0; i < 5; i++) {
+            Wave wave;
+            wave.frequency = ofRandom(0.5, 2.0);
+            wave.amplitude = ofRandom(20, 60);
+            wave.phase = ofRandom(0, TWO_PI);
+            wave.direction = ofVec3f(ofRandom(-1, 1), ofRandom(-1, 1), ofRandom(-1, 1)).normalize();
+            waves.push_back(wave);
+        }
     }
 }
 
@@ -119,295 +172,277 @@ void ofApp::dragEvent(ofDragInfo dragInfo){
 }
 
 //--------------------------------------------------------------
-void ofApp::initializePalette(){
-    palette.clear();
-    palette.push_back(ofColor::fromHex(0x2C2370)); // deep indigo
-    palette.push_back(ofColor::fromHex(0x3E2B9B)); // rich violet
-    palette.push_back(ofColor::fromHex(0x885DC8)); // medium purple
-    palette.push_back(ofColor::fromHex(0xB799E4)); // light lavender
-    palette.push_back(ofColor::fromHex(0xCABBE8)); // pale lavender
-    palette.push_back(ofColor::fromHex(0x78B9E6)); // soft sky-blue
-    palette.push_back(ofColor::fromHex(0x4059D4)); // vivid royal-blue
-    palette.push_back(ofColor::fromHex(0x212F7D)); // midnight blue
-    palette.push_back(ofColor::fromHex(0x141B21)); // near-black blue
-    palette.push_back(ofColor::fromHex(0x1E2E28)); // deep teal-black
+void ofApp::createFlowField(){
+    flowField.cols = 20;
+    flowField.rows = 20;
+    flowField.depth = 20;
+    flowField.scale = 40.0;
+    
+    flowField.vectors.clear();
+    flowField.vectors.resize(flowField.cols * flowField.rows * flowField.depth);
+    
+    updateFlowField();
+}
+
+//--------------------------------------------------------------
+void ofApp::updateFlowField(){
+    for(int z = 0; z < flowField.depth; z++) {
+        for(int y = 0; y < flowField.rows; y++) {
+            for(int x = 0; x < flowField.cols; x++) {
+                int index = x + y * flowField.cols + z * flowField.cols * flowField.rows;
+                
+                float xPos = (x - flowField.cols/2) * flowField.scale;
+                float yPos = (y - flowField.rows/2) * flowField.scale;
+                float zPos = (z - flowField.depth/2) * flowField.scale;
+                
+                // Create complex flow field using multiple noise octaves
+                float angle = ofNoise(xPos * noiseScale, yPos * noiseScale, zPos * noiseScale, time * 0.1) * TWO_PI * 4;
+                float angle2 = ofNoise(xPos * noiseScale * 2, yPos * noiseScale * 2, zPos * noiseScale * 2, time * 0.2) * TWO_PI * 2;
+                
+                ofVec3f vector;
+                vector.x = cos(angle) * cos(angle2);
+                vector.y = sin(angle) * cos(angle2);
+                vector.z = sin(angle2);
+                
+                // Add wave influence
+                for(auto& wave : waves) {
+                    float waveContrib = sin(wave.phase + time * wave.frequency + 
+                                          (xPos * wave.direction.x + yPos * wave.direction.y + zPos * wave.direction.z) * 0.01);
+                    vector += wave.direction * waveContrib * 0.3;
+                }
+                
+                flowField.vectors[index] = vector.normalize();
+            }
+        }
+    }
 }
 
 //--------------------------------------------------------------
 void ofApp::createParticles(){
     particles.clear();
-    velocities.clear();
-    sizes.clear();
-    particleColors.clear();
-    shapeTypes.clear();
-    rotationAngles.clear();
-    rotationAxis.clear();
     
     for(int i = 0; i < numParticles; i++){
-        ofVec3f pos;
-        pos.x = ofRandom(-200, 200);
-        pos.y = ofRandom(-200, 200);
-        pos.z = ofRandom(-200, 200);
-        particles.push_back(pos);
+        Particle p;
+        p.position.set(ofRandom(-300, 300), ofRandom(-300, 300), ofRandom(-300, 300));
+        p.velocity.set(0, 0, 0);
+        p.acceleration.set(0, 0, 0);
+        p.size = ofRandom(1, 4);
+        p.age = 0;
+        p.maxAge = ofRandom(300, 800);
+        p.alive = true;
+        p.trail.clear();
         
-        ofVec3f vel;
-        vel.x = ofRandom(-0.5, 0.5);
-        vel.y = ofRandom(-0.5, 0.5);
-        vel.z = ofRandom(-0.5, 0.5);
-        velocities.push_back(vel);
-        
-        sizes.push_back(ofRandom(3, 12));
-        shapeTypes.push_back(ofRandom(3));
-        rotationAngles.push_back(ofRandom(360));
-        rotationAxis.push_back(ofVec3f(ofRandom(-1, 1), ofRandom(-1, 1), ofRandom(-1, 1)).getNormalized());
-        
-        float colorIndex = (float)i / numParticles;
-        particleColors.push_back(getColorFromPalette(colorIndex));
+        particles.push_back(p);
     }
 }
 
 //--------------------------------------------------------------
 void ofApp::updateParticles(){
     for(int i = 0; i < particles.size(); i++){
-        float noiseScale = 0.005;
-        float noiseStrength = 2.0;
+        Particle& p = particles[i];
         
-        ofVec3f waveForce;
-        float waveTime = time * 0.8;
-        waveForce.x = sin(waveTime + particles[i].y * 0.01) * 0.3;
-        waveForce.y = cos(waveTime + particles[i].x * 0.01) * 0.3;
-        waveForce.z = sin(waveTime * 0.7 + particles[i].x * 0.005 + particles[i].y * 0.005) * 0.2;
+        if(!p.alive) continue;
         
-        ofVec3f noise;
-        noise.x = ofNoise(particles[i].x * noiseScale, particles[i].y * noiseScale, particles[i].z * noiseScale, time * 0.15) - 0.5;
-        noise.y = ofNoise(particles[i].x * noiseScale + 1000, particles[i].y * noiseScale, particles[i].z * noiseScale, time * 0.15) - 0.5;
-        noise.z = ofNoise(particles[i].x * noiseScale, particles[i].y * noiseScale + 1000, particles[i].z * noiseScale, time * 0.15) - 0.5;
+        // Get flow field force
+        ofVec3f flowForce = getFlowFieldVector(p.position) * 2.0;
         
-        ofVec3f spiralForce;
-        float spiralRadius = sqrt(particles[i].x * particles[i].x + particles[i].z * particles[i].z);
-        if(spiralRadius > 0) {
-            float spiralAngle = atan2(particles[i].z, particles[i].x) + time * 0.5;
-            spiralForce.x = cos(spiralAngle) * 0.1;
-            spiralForce.z = sin(spiralAngle) * 0.1;
-            spiralForce.y = sin(time * 0.3 + i * 0.1) * 0.05;
-        }
+        // Add some randomness
+        ofVec3f randomForce;
+        randomForce.x = ofRandom(-0.5, 0.5);
+        randomForce.y = ofRandom(-0.5, 0.5);
+        randomForce.z = ofRandom(-0.5, 0.5);
         
-        ofVec3f attractionForce;
-        for(int j = 0; j < min(5, (int)particles.size()); j++) {
-            if(i != j) {
-                ofVec3f diff = particles[j] - particles[i];
-                float dist = diff.length();
-                if(dist > 0 && dist < 100) {
-                    diff.normalize();
-                    float strength = ofMap(dist, 0, 100, 0.2, 0.01);
-                    attractionForce += diff * strength;
+        // Combine forces
+        p.acceleration = flowForce + randomForce * 0.1;
+        
+        // Update physics
+        p.velocity += p.acceleration;
+        p.velocity *= 0.98; // damping
+        p.position += p.velocity;
+        
+        // Update trail
+        if(p.trail.size() > 0) {
+            float dist = p.position.distance(p.trail.back());
+            if(dist > 3.0) {
+                p.trail.push_back(p.position);
+                if(p.trail.size() > 20) {
+                    p.trail.erase(p.trail.begin());
                 }
             }
+        } else {
+            p.trail.push_back(p.position);
         }
         
-        ofVec3f centerAttraction = -particles[i] * 0.001;
+        // Age and respawn
+        p.age++;
+        if(p.age > p.maxAge) {
+            p.position.set(ofRandom(-300, 300), ofRandom(-300, 300), ofRandom(-300, 300));
+            p.velocity.set(0, 0, 0);
+            p.age = 0;
+            p.maxAge = ofRandom(300, 800);
+            p.trail.clear();
+        }
         
-        velocities[i] += (noise * noiseStrength + waveForce + spiralForce + attractionForce + centerAttraction) * ofGetLastFrameTime();
-        velocities[i] *= 0.97;
-        
-        particles[i] += velocities[i];
-        
-        if(particles[i].x > 300 || particles[i].x < -300) velocities[i].x *= -0.8;
-        if(particles[i].y > 300 || particles[i].y < -300) velocities[i].y *= -0.8;
-        if(particles[i].z > 300 || particles[i].z < -300) velocities[i].z *= -0.8;
-        
-        float rotSpeed = 1.0 + sin(time * 0.3 + i * 0.05) * 0.5;
-        rotationAngles[i] += rotSpeed;
-        
-        float colorWave1 = sin(time * 0.8 + i * 0.1) * 0.5 + 0.5;
-        float colorWave2 = cos(time * 0.6 + particles[i].y * 0.01) * 0.3 + 0.7;
-        float t = (colorWave1 + colorWave2) * 0.5;
-        particleColors[i] = getColorFromPalette(t);
+        // Boundary wrapping
+        if(p.position.x > 400) p.position.x = -400;
+        if(p.position.x < -400) p.position.x = 400;
+        if(p.position.y > 400) p.position.y = -400;
+        if(p.position.y < -400) p.position.y = 400;
+        if(p.position.z > 400) p.position.z = -400;
+        if(p.position.z < -400) p.position.z = 400;
     }
 }
 
 //--------------------------------------------------------------
 void ofApp::drawParticles(){
-
+    ofEnableBlendMode(OF_BLENDMODE_ADD);
     
     for(int i = 0; i < particles.size(); i++){
-        ofColor glowColor = particleColors[i];
+        Particle& p = particles[i];
+        if(!p.alive) continue;
         
+        // Calculate alpha based on age
+        float ageAlpha = ofMap(p.age, 0, p.maxAge, 255, 30);
+        
+        // Draw particle
+        ofSetColor(255, ageAlpha);
         ofPushMatrix();
-        ofTranslate(particles[i]);
-        
-        float pulse1 = sin(time * 2.5 + i * 0.3) * 0.3;
-        float pulse2 = cos(time * 4.0 + particles[i].x * 0.01) * 0.2;
-        float pulse3 = sin(time * 1.8 + particles[i].y * 0.008) * 0.25;
-        float pulseSize = sizes[i] * (1.0 + pulse1 + pulse2 + pulse3);
-        
-        float wobbleX = sin(time * 1.2 + i * 0.2) * 2.0;
-        float wobbleY = cos(time * 0.9 + i * 0.15) * 1.5;
-        float wobbleZ = sin(time * 1.5 + i * 0.25) * 1.8;
-        ofTranslate(wobbleX, wobbleY, wobbleZ);
-        
-        ofSetColor(glowColor, 60);
-        if(shapeTypes[i] == 0) {
-            drawCrystal(pulseSize * 2.0, rotationAngles[i], rotationAxis[i]);
-        } else if(shapeTypes[i] == 1) {
-            drawStar(pulseSize * 2.0, rotationAngles[i]);
-        } else {
-            drawDiamond(pulseSize * 2.0, rotationAngles[i], rotationAxis[i]);
-        }
-        
-        ofSetColor(glowColor, 120);
-        if(shapeTypes[i] == 0) {
-            drawCrystal(pulseSize * 1.2, rotationAngles[i] * 1.3, rotationAxis[i]);
-        } else if(shapeTypes[i] == 1) {
-            drawStar(pulseSize * 1.2, rotationAngles[i] * 1.3);
-        } else {
-            drawDiamond(pulseSize * 1.2, rotationAngles[i] * 1.3, rotationAxis[i]);
-        }
-        
-        ofSetColor(glowColor, 255);
-        if(shapeTypes[i] == 0) {
-            drawCrystal(pulseSize * 0.6, rotationAngles[i] * 1.8, rotationAxis[i]);
-        } else if(shapeTypes[i] == 1) {
-            drawStar(pulseSize * 0.6, rotationAngles[i] * 1.8);
-        } else {
-            drawDiamond(pulseSize * 0.6, rotationAngles[i] * 1.8, rotationAxis[i]);
-        }
-        
+        ofTranslate(p.position);
+        ofDrawSphere(0, 0, 0, p.size);
         ofPopMatrix();
-    }
-    
-    ofEnableBlendMode(OF_BLENDMODE_ALPHA);
-    
-    ofSetColor(palette[5], 60);
-    for(int i = 0; i < particles.size(); i += 2){
-        for(int j = i + 1; j < min(i + 3, (int)particles.size()); j++){
-            float distance = particles[i].distance(particles[j]);
-            if(distance < 60){
-                float alpha = ofMap(distance, 0, 60, 120, 20);
-                ofSetColor(palette[6], alpha);
-                ofDrawLine(particles[i], particles[j]);
+        
+        // Draw trail
+        if(p.trail.size() > 1) {
+            for(int j = 1; j < p.trail.size(); j++) {
+                float trailAlpha = ofMap(j, 0, p.trail.size() - 1, 10, ageAlpha * 0.5);
+                ofSetColor(255, trailAlpha);
+                ofDrawLine(p.trail[j-1], p.trail[j]);
             }
         }
     }
     
-    for(int i = 0; i < trailPoints.size(); i++){
-        float trailAlpha = ofMap(i, 0, trailPoints.size() - 1, 10, 80);
-        ofSetColor(trailColors[i], trailAlpha);
+    ofEnableBlendMode(OF_BLENDMODE_ALPHA);
+}
+
+//--------------------------------------------------------------
+void ofApp::drawFlowField(){
+    ofSetColor(80);
+    ofNoFill();
+    
+    for(int z = 0; z < flowField.depth; z += 2) {
+        for(int y = 0; y < flowField.rows; y += 2) {
+            for(int x = 0; x < flowField.cols; x += 2) {
+                int index = x + y * flowField.cols + z * flowField.cols * flowField.rows;
+                
+                float xPos = (x - flowField.cols/2) * flowField.scale;
+                float yPos = (y - flowField.rows/2) * flowField.scale;
+                float zPos = (z - flowField.depth/2) * flowField.scale;
+                
+                ofVec3f start(xPos, yPos, zPos);
+                ofVec3f end = start + flowField.vectors[index] * 20;
+                
+                ofDrawLine(start, end);
+            }
+        }
+    }
+}
+
+//--------------------------------------------------------------
+void ofApp::drawConnections(){
+    ofSetColor(120, 80);
+    
+    for(int i = 0; i < particles.size(); i += 3) {
+        for(int j = i + 1; j < min(i + 8, (int)particles.size()); j++) {
+            if(!particles[i].alive || !particles[j].alive) continue;
+            
+            float distance = particles[i].position.distance(particles[j].position);
+            if(distance < 80) {
+                float alpha = ofMap(distance, 0, 80, 60, 5);
+                ofSetColor(255, alpha);
+                ofDrawLine(particles[i].position, particles[j].position);
+            }
+        }
+    }
+}
+
+//--------------------------------------------------------------
+void ofApp::drawWaveInterference(){
+    ofSetColor(40);
+    ofNoFill();
+    
+    // Draw wave interference patterns as concentric circles
+    for(int w = 0; w < waves.size(); w++) {
         ofPushMatrix();
-        ofTranslate(trailPoints[i]);
-        ofDrawSphere(0, 0, 0, 1.5);
+        
+        // Position wave center based on time
+        float centerX = cos(time * waves[w].frequency * 0.3 + waves[w].phase) * 100;
+        float centerY = sin(time * waves[w].frequency * 0.2 + waves[w].phase) * 100;
+        float centerZ = cos(time * waves[w].frequency * 0.4 + waves[w].phase) * 80;
+        
+        ofTranslate(centerX, centerY, centerZ);
+        
+        // Draw expanding rings
+        for(int r = 1; r <= 8; r++) {
+            float radius = (r * 30) + sin(time * waves[w].frequency + waves[w].phase) * 20;
+            float alpha = ofMap(r, 1, 8, 60, 10);
+            
+            ofSetColor(255, alpha);
+            ofDrawSphere(0, 0, 0, radius);
+        }
+        
         ofPopMatrix();
     }
 }
 
 //--------------------------------------------------------------
-ofColor ofApp::getColorFromPalette(float t){
-    t = ofClamp(t, 0, 1);
-    float scaledT = t * (palette.size() - 1);
-    int index1 = (int)scaledT;
-    int index2 = min(index1 + 1, (int)palette.size() - 1);
-    float blend = scaledT - index1;
+void ofApp::drawGeometricPatterns(){
+    ofSetColor(30);
+    ofNoFill();
     
-    return palette[index1].getLerped(palette[index2], blend);
+    // Draw rotating geometric wireframes
+    ofPushMatrix();
+    ofRotateDeg(time * 10, 1, 0.5, 0.3);
+    
+    // Nested cubes
+    for(int i = 1; i <= 5; i++) {
+        float size = i * 50 + sin(time + i) * 20;
+        ofSetColor(255, 80 - i * 10);
+        ofDrawBox(0, 0, 0, size);
+    }
+    
+    ofPopMatrix();
+    
+    // Draw spiraling lines
+    ofSetColor(60);
+    for(int i = 0; i < 360; i += 10) {
+        float angle = ofDegToRad(i);
+        float radius = 150 + sin(time * 0.5 + angle) * 50;
+        float height = cos(time * 0.3 + angle) * 100;
+        
+        ofVec3f pos1(cos(angle) * radius, height, sin(angle) * radius);
+        ofVec3f pos2(cos(angle + 0.1) * radius, height + 5, sin(angle + 0.1) * radius);
+        
+        ofDrawLine(pos1, pos2);
+    }
 }
 
 //--------------------------------------------------------------
-void ofApp::drawCrystal(float size, float rotation, ofVec3f axis){
-    ofPushMatrix();
-    ofRotateDeg(rotation, axis.x, axis.y, axis.z);
+ofVec3f ofApp::getFlowFieldVector(ofVec3f pos){
+    // Convert world position to flow field coordinates
+    int x = (int)ofMap(pos.x, -400, 400, 0, flowField.cols - 1);
+    int y = (int)ofMap(pos.y, -400, 400, 0, flowField.rows - 1);
+    int z = (int)ofMap(pos.z, -400, 400, 0, flowField.depth - 1);
     
-    ofMesh crystal;
-    crystal.setMode(OF_PRIMITIVE_TRIANGLES);
+    // Clamp to valid indices
+    x = ofClamp(x, 0, flowField.cols - 1);
+    y = ofClamp(y, 0, flowField.rows - 1);
+    z = ofClamp(z, 0, flowField.depth - 1);
     
-    ofVec3f top(0, size, 0);
-    ofVec3f bottom(0, -size, 0);
+    int index = x + y * flowField.cols + z * flowField.cols * flowField.rows;
     
-    int segments = 8;
-    float radius = size * 0.6;
-    
-    for(int i = 0; i < segments; i++){
-        float angle1 = (i * TWO_PI) / segments;
-        float angle2 = ((i + 1) * TWO_PI) / segments;
-        
-        ofVec3f p1(cos(angle1) * radius, 0, sin(angle1) * radius);
-        ofVec3f p2(cos(angle2) * radius, 0, sin(angle2) * radius);
-        
-        crystal.addVertex(top);
-        crystal.addVertex(p1);
-        crystal.addVertex(p2);
-        
-        crystal.addVertex(bottom);
-        crystal.addVertex(p2);
-        crystal.addVertex(p1);
+    if(index >= 0 && index < flowField.vectors.size()) {
+        return flowField.vectors[index];
     }
     
-    crystal.draw();
-    ofPopMatrix();
-}
-
-//--------------------------------------------------------------
-void ofApp::drawStar(float size, float rotation){
-    ofPushMatrix();
-    ofRotateDeg(rotation, 0, 0, 1);
-    
-    int points = 6;
-    float outerRadius = size;
-    float innerRadius = size * 0.4;
-    
-    ofPath star;
-    star.setStrokeWidth(2);
-    star.setFilled(true);
-    
-    for(int i = 0; i <= points * 2; i++){
-        float angle = (i * TWO_PI) / (points * 2);
-        float radius = (i % 2 == 0) ? outerRadius : innerRadius;
-        
-        float x = cos(angle) * radius;
-        float y = sin(angle) * radius;
-        
-        if(i == 0) star.moveTo(x, y);
-        else star.lineTo(x, y);
-    }
-    star.close();
-    star.draw();
-    
-    ofRotateDeg(90, 1, 0, 0);
-    star.draw();
-    
-    ofRotateDeg(90, 0, 1, 0);
-    star.draw();
-    
-    ofPopMatrix();
-}
-
-//--------------------------------------------------------------
-void ofApp::drawDiamond(float size, float rotation, ofVec3f axis){
-    ofPushMatrix();
-    ofRotateDeg(rotation, axis.x, axis.y, axis.z);
-    
-    ofMesh diamond;
-    diamond.setMode(OF_PRIMITIVE_TRIANGLES);
-    
-    ofVec3f vertices[] = {
-        ofVec3f(0, size, 0),        // top
-        ofVec3f(size * 0.7, 0, 0),  // right
-        ofVec3f(0, 0, size * 0.7),  // front
-        ofVec3f(-size * 0.7, 0, 0), // left
-        ofVec3f(0, 0, -size * 0.7), // back
-        ofVec3f(0, -size, 0)        // bottom
-    };
-    
-    int faces[][3] = {
-        {0, 1, 2}, {0, 2, 3}, {0, 3, 4}, {0, 4, 1},
-        {5, 2, 1}, {5, 3, 2}, {5, 4, 3}, {5, 1, 4}
-    };
-    
-    for(int i = 0; i < 8; i++){
-        for(int j = 0; j < 3; j++){
-            diamond.addVertex(vertices[faces[i][j]]);
-        }
-    }
-    
-    diamond.draw();
-    ofPopMatrix();
+    return ofVec3f(0, 0, 0);
 }

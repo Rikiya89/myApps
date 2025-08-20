@@ -24,23 +24,42 @@ class ofApp : public ofBaseApp{
 		void gotMessage(ofMessage msg) override;
 		
 	private:
-		vector<ofColor> palette;
-		vector<ofVec3f> particles;
-		vector<ofVec3f> velocities;
-		vector<float> sizes;
-		vector<ofColor> particleColors;
-		vector<int> shapeTypes;
-		vector<float> rotationAngles;
-		vector<ofVec3f> rotationAxis;
+		struct FlowField {
+			vector<ofVec3f> vectors;
+			int cols, rows, depth;
+			float scale;
+		};
+		
+		struct Particle {
+			ofVec3f position;
+			ofVec3f velocity;
+			ofVec3f acceleration;
+			float size;
+			float age;
+			float maxAge;
+			bool alive;
+			vector<ofVec3f> trail;
+		};
+		
+		struct Wave {
+			float frequency;
+			float amplitude;
+			float phase;
+			ofVec3f direction;
+		};
+		
+		vector<Particle> particles;
+		vector<Wave> waves;
+		FlowField flowField;
 		
 		ofEasyCam cam;
 		float time;
 		int numParticles;
-		
-		vector<ofVec3f> trailPoints;
-		vector<ofColor> trailColors;
+		float noiseScale;
 		float cameraRotationSpeed;
 		bool autoRotateCamera;
+		bool showFlowField;
+		bool showConnections;
 		
 		bool useAdditiveBlend;
 		vector<ofVec3f> starField;
@@ -48,10 +67,17 @@ class ofApp : public ofBaseApp{
 		float globalRotateSpeed;
 		float fogNear, fogFar;
 		
-		void initializePalette();
+		void createFlowField();
+		void updateFlowField();
 		void createParticles();
 		void updateParticles();
 		void drawParticles();
+		void drawFlowField();
+		void drawConnections();
+		void drawWaveInterference();
+		void drawGeometricPatterns();
+		ofVec3f getFlowFieldVector(ofVec3f pos);
+		void initializePalette();
 		void drawCrystal(float size, float rotation, ofVec3f axis);
 		void drawStar(float size, float rotation);
 		void drawDiamond(float size, float rotation, ofVec3f axis);
