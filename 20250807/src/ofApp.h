@@ -61,6 +61,12 @@ class ofApp : public ofBaseApp{
 		bool showFlowField;
 		bool showConnections;
 		
+		bool useAdditiveBlend;
+		vector<ofVec3f> starField;
+		int numStars;
+		float globalRotateSpeed;
+		float fogNear, fogFar;
+		
 		void createFlowField();
 		void updateFlowField();
 		void createParticles();
@@ -71,4 +77,12 @@ class ofApp : public ofBaseApp{
 		void drawWaveInterference();
 		void drawGeometricPatterns();
 		ofVec3f getFlowFieldVector(ofVec3f pos);
+		void initializePalette();
+		void drawCrystal(float size, float rotation, ofVec3f axis);
+		void drawStar(float size, float rotation);
+		void drawDiamond(float size, float rotation, ofVec3f axis);
+		ofColor getColorFromPalette(float t);
+		void initStarField();
+		void drawStarField();
+		float fogAlpha(const ofVec3f& p) const;
 };
