@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git rm -r --cached .vs/)",
+      "Bash(git rm -rf --cached .vs/)",
+      "Bash(git config core.autocrlf true)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
