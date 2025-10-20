@@ -1,0 +1,16 @@
+﻿  モジュール依存関係のソースをスキャンしています...
+  ofApp.cpp
+C:\Users\rikiy\of_v0.12.1_vs_64_release\libs\openFrameworks\utils\ofUtils.h(1,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+  (ソース ファイル 'src/ofApp.cpp' をコンパイルしています)
+  
+C:\Users\rikiy\of_v0.12.1_vs_64_release\libs\openFrameworks\math\ofVec3f.h(1,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+  (ソース ファイル 'src/ofApp.cpp' をコンパイルしています)
+  
+C:\Users\rikiy\of_v0.12.1_vs_64_release\libs\openFrameworks\math\ofVec2f.h(1,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+  (ソース ファイル 'src/ofApp.cpp' をコンパイルしています)
+  
+LINK : warning LNK4075: /INCREMENTAL は /FORCE の指定によって無視されます。
+     ライブラリ bin\20251004_debug.lib とオブジェクト bin\20251004_debug.exp を作成中
+  20251004.vcxproj -> C:\Users\rikiy\of_v0.12.1_vs_64_release\apps\myApps\20251004\bin\20251004_debug.exe
+  ファイルが見つかりません - *.dll
+  0 個のファイルをコピーしました
