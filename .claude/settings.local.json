@@ -1,0 +1,14 @@
+{
+  "includeCoAuthoredBy": false,
+  "permissions": {
+    "allow": [
+      "Bash(git log:*)",
+      "Bash(git config:*)",
+      "Read(//Users/okawa_rikiya/.config/**)",
+      "Bash(git filter-branch:*)",
+      "Bash(git stash:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
