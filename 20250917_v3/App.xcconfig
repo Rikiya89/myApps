@@ -1,0 +1,3 @@
+// Local overrides for project configuration.
+// Remove deprecated AGL framework for modern macOS SDK compatibility.
+OF_CORE_FRAMEWORKS = -framework Accelerate -framework AppKit -framework ApplicationServices -framework AudioToolbox -framework AVFoundation -framework Cocoa -framework CoreAudio -framework CoreFoundation -framework CoreMedia -framework CoreServices -framework CoreVideo -framework IOKit -framework OpenGL -framework QuartzCore -framework Security

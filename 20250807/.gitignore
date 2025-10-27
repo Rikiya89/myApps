@@ -1,0 +1,9 @@
+# Xcode user-specific files
+*.xcuserstate
+xcuserdata/
+*.xcuserdatad
+
+# Build artifacts
+bin/
+build/
+*.app

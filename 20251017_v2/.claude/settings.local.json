@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(gh pr view 36)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
